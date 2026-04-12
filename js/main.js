@@ -31,8 +31,3 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Münster Mesh website loaded successfully! 🌐');
-});

@@ -1,0 +1,13 @@
+title: Münster Mesh
+description: Dezentrales Mesh-Netzwerk im Münsterland
+url: "https://yourusername.github.io"
+baseurl: "/muenstermesh"
+lang: de
+
+# Build
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# No extra plugins — works with default GitHub Pages
+plugins: []

@@ -1,3 +1,0 @@
----
-title: "Münster Mesh"
----
