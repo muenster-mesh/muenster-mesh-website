@@ -1,140 +1,136 @@
 # Münster Mesh
 
-🌐 Website für die Meshtastic Community im Münsterland
+🌐 Website für die Meshtastic Community im Münsterland — built with [Hugo](https://gohugo.io).
 
-## Was ist dies?
+## Quickstart
 
-Diese Website dient als zentrale Anlaufstelle für die Münster Mesh Community - ein dezentrales Mesh-Netzwerk basierend auf Meshtastic im Münsterland.
+### Voraussetzungen
 
-## Features
+- [Hugo](https://gohugo.io/installation/) (extended edition, v0.160+)
+- [Git](https://git-scm.com/)
 
-- 📱 Responsive Design (funktioniert auf allen Geräten)
-- 🎨 Modernes, sauberes Design
-- 📝 Informationen über Meshtastic
-- 🗺️ Karte der Mesh-Knoten im Münsterland
-- 🚀 Optimiert für GitHub Pages
-
-## Deployment auf GitHub Pages
-
-### Schritt 1: Repository erstellen
-
-1. Erstelle ein neues GitHub Repository namens `muenstermesh` (oder einen anderen Namen)
-2. Pushe diesen Code zum Repository:
+### Lokal entwickeln
 
 ```bash
-cd /Users/thor/git/muenstermesh
-git init
-git add .
-git commit -m "Initial commit: Münster Mesh website"
-git branch -M main
-git remote add origin https://github.com/DEIN-USERNAME/muenstermesh.git
-git push -u origin main
+# Repository klonen
+git clone https://github.com/yourusername/muenstermesh.git
+cd muenstermesh
+
+# Hugo Development Server starten
+hugo server -D
+
+# Website öffnen unter http://localhost:1313/muenstermesh/
 ```
 
-### Schritt 2: GitHub Pages aktivieren
+### Build
 
-1. Gehe zu deinem Repository auf GitHub
-2. Klicke auf **Settings** (Einstellungen)
-3. Scrolle zur **Pages** Sektion im linken Menü
-4. Unter **Source** wähle:
-   - Branch: `main`
-   - Folder: `/ (root)`
-5. Klicke auf **Save**
-
-### Schritt 3: Website aufrufen
-
-Nach wenigen Minuten ist deine Website verfügbar unter:
-```
-https://DEIN-USERNAME.github.io/muenstermesh/
+```bash
+hugo --minify
+# Ausgabe in ./public/
 ```
 
-## Eigene Domain verwenden (optional)
-
-Falls du eine eigene Domain verwenden möchtest:
-
-1. Erstelle eine Datei `CNAME` im Root-Verzeichnis mit deiner Domain:
-   ```
-   muenster-mesh.de
-   ```
-
-2. Konfiguriere bei deinem Domain-Anbieter einen CNAME-Record:
-   ```
-   CNAME  @  DEIN-USERNAME.github.io
-   ```
-
-3. Warte auf DNS-Propagierung (kann bis zu 24h dauern)
-
-## Inhalte anpassen
-
-### HTML bearbeiten
-Die Hauptinhalte befinden sich in `index.html`. Du kannst die Texte, Links und Inhalte direkt dort anpassen.
-
-### Styling anpassen
-Alle Styles sind in `css/style.css` definiert. Passe Farben, Schriftarten und Layout nach Belieben an.
-
-### JavaScript anpassen
-Interaktive Funktionen findest du in `js/main.js`.
-
-## Markdown Content (optional)
-
-Das System unterstützt auch Markdown-basierte Inhalte. Siehe `content/` Ordner für Beispiele.
-
-## Struktur
+## Projektstruktur
 
 ```
 muenstermesh/
-├── index.html          # Hauptseite
-├── css/
-│   └── style.css      # Styling
-├── js/
-│   └── main.js        # JavaScript
-├── content/           # Markdown-Inhalte (optional)
-│   ├── meshtastic.md
-│   └── karte.md
-├── README.md          # Diese Datei
-└── .gitignore        # Git ignore Datei
+├── .github/workflows/
+│   └── hugo.yml              # GitHub Actions: Auto-Deploy
+├── content/
+│   ├── _index.md             # Homepage metadata
+│   └── sections/             # Sektionen der Startseite (Markdown!)
+│       ├── home.md           # Hero / Willkommen
+│       ├── meshtastic.md     # Was ist Meshtastic?
+│       ├── karte.md          # Karte Münsterland
+│       └── mitmachen.md      # Mitmachen
+├── layouts/
+│   ├── _default/
+│   │   ├── baseof.html       # Base Layout
+│   │   ├── index.html        # Homepage Template
+│   │   ├── single.html       # Einzelseiten Template
+│   │   └── list.html         # Listen Template
+│   ├── partials/
+│   │   ├── header.html       # Kopfbereich
+│   │   ├── nav.html          # Navigation
+│   │   └── footer.html       # Fußbereich
+│   └── shortcodes/           # Wiederverwendbare Komponenten
+├── static/
+│   ├── css/style.css         # Stylesheet
+│   └── js/main.js            # JavaScript
+├── hugo.toml                 # Hugo-Konfiguration
+└── README.md
 ```
 
-## Map Integration
+## Inhalte bearbeiten
 
-Um eine echte Karte zu integrieren, kannst du:
+Alle Inhalte werden als **Markdown-Dateien** in `content/sections/` gepflegt:
 
-1. **Leaflet.js** verwenden:
-   ```html
-   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+| Datei | Sektion |
+|---|---|
+| `home.md` | Willkommens-Hero |
+| `meshtastic.md` | Was ist Meshtastic? |
+| `karte.md` | Karte Münsterland |
+| `mitmachen.md` | Mitmachen |
+
+### Neue Sektion hinzufügen
+
+1. Erstelle eine neue Datei in `content/sections/`:
+
+```markdown
+---
+title: "Meine neue Sektion"
+weight: 5
+sectionId: "neue-sektion"
+sectionClass: ""
+---
+
+Hier kommt der Inhalt in Markdown...
+```
+
+2. Füge einen Menüeintrag in `hugo.toml` hinzu:
+
+```toml
+[[menu.main]]
+  name = "Neue Sektion"
+  url = "#neue-sektion"
+  weight = 5
+```
+
+## Deployment (GitHub Pages)
+
+Das Deployment läuft **automatisch** via GitHub Actions:
+
+1. Erstelle ein Repository auf GitHub
+2. Pushe den Code:
+   ```bash
+   git remote add origin https://github.com/DEIN-USERNAME/muenstermesh.git
+   git push -u origin main
    ```
+3. Gehe zu **Settings → Pages**
+4. Unter **Source** wähle: **GitHub Actions**
+5. Die Website ist nach dem ersten Push automatisch live unter:
+   `https://DEIN-USERNAME.github.io/muenstermesh/`
 
-2. **Meshtastic Map API** nutzen (falls verfügbar)
+> **Wichtig:** In den Pages-Settings muss als Source "GitHub Actions" ausgewählt sein (nicht "Deploy from a branch").
 
-3. **OpenStreetMap** mit benutzerdefinierten Markern
+## Konfiguration
 
-## Mitwirken
+Alle Einstellungen in `hugo.toml`:
 
-Möchtest du zur Website beitragen?
+```toml
+baseURL = "https://yourusername.github.io/muenstermesh/"  # Deine URL
+title = "Münster Mesh"                                     # Site-Titel
 
-1. Fork das Repository
-2. Erstelle einen Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit deine Änderungen (`git commit -m 'Add some AmazingFeature'`)
-4. Push zum Branch (`git push origin feature/AmazingFeature`)
-5. Öffne einen Pull Request
-
-## Lizenz
-
-Dieses Projekt ist Open Source und steht unter der MIT Lizenz.
+[params]
+  tagline = "Dezentrales Mesh-Netzwerk im Münsterland"
+  email = "info@muenster-mesh.de"
+  github = "https://github.com/yourusername/muenstermesh"
+```
 
 ## Links
 
-- [Meshtastic Official Website](https://meshtastic.org)
-- [Meshtastic Documentation](https://meshtastic.org/docs)
-- [Meshtastic GitHub](https://github.com/meshtastic)
-
-## Kontakt
-
-Für Fragen und Anregungen:
-- 💬 Community Chat: [Link einfügen]
-- 📧 Email: info@muenster-mesh.de (Beispiel)
-- 🐙 GitHub Issues: [Link einfügen]
+- [Meshtastic](https://meshtastic.org)
+- [Hugo Documentation](https://gohugo.io/documentation/)
+- [GitHub Pages](https://docs.github.com/en/pages)
 
 ---
 

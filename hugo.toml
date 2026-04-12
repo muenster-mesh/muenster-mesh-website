@@ -1,0 +1,43 @@
+baseURL = "https://yourusername.github.io/muenstermesh/"
+languageCode = "de"
+title = "Münster Mesh"
+
+[params]
+  description = "Dezentrales Mesh-Netzwerk im Münsterland"
+  tagline = "Dezentrales Mesh-Netzwerk im Münsterland"
+  author = "Münster Mesh Community"
+  year = "2026"
+  email = "info@muenster-mesh.de"
+  github = "https://github.com/yourusername/muenstermesh"
+
+[params.meshtastic]
+  url = "https://meshtastic.org"
+  docs = "https://meshtastic.org/docs"
+  github = "https://github.com/meshtastic"
+  flasher = "https://flasher.meshtastic.org"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "#home"
+    weight = 1
+  [[menu.main]]
+    name = "Was ist Meshtastic?"
+    url = "#meshtastic"
+    weight = 2
+  [[menu.main]]
+    name = "Karte"
+    url = "#karte"
+    weight = 3
+  [[menu.main]]
+    name = "Mitmachen"
+    url = "#mitmachen"
+    weight = 4
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML"]

@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{ range .Pages }}
+<section>
+    <h2>{{ .Title }}</h2>
+    <div class="content-box">
+        {{ .Content }}
+    </div>
+</section>
+{{ end }}
+{{ end }}

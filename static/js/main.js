@@ -12,14 +12,13 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Optional: Add active state to navigation
+// Active state for navigation on scroll
 window.addEventListener('scroll', () => {
     let current = '';
     const sections = document.querySelectorAll('section');
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
         if (pageYOffset >= sectionTop - 100) {
             current = section.getAttribute('id');
         }
@@ -32,13 +31,6 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-
-// Optional: Future functionality for map integration
-function initMap() {
-    // Placeholder for map initialization
-    // Can be integrated with Leaflet.js or similar
-    console.log('Map initialization placeholder');
-}
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {

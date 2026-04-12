@@ -1,0 +1,11 @@
+{{ define "main" }}
+    {{/* Render each section in weight order */}}
+    {{ range sort (where .Site.RegularPages "Section" "sections") "Weight" }}
+    <section id="{{ .Params.sectionId }}" class="{{ .Params.sectionClass | default "" }}">
+        <h2>{{ .Title }}</h2>
+        <div class="content-box">
+            {{ .Content }}
+        </div>
+    </section>
+    {{ end }}
+{{ end }}
