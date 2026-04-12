@@ -53,7 +53,3 @@ Alle Inhalte stehen direkt in `index.md` als Markdown-Sektionen mit HTML-Section
 - [MeshCore](https://github.com/ripplebiz/MeshCore)
 - [Jekyll Documentation](https://jekyllrb.com/docs/)
 - [GitHub Pages](https://docs.github.com/en/pages)
-
----
-
-Erstellt mit ❤️ von der Münster Mesh Community
