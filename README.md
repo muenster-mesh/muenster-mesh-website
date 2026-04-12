@@ -1,6 +1,6 @@
 # Münster Mesh
 
-🌐 Website für die Meshtastic Community im Münsterland — built with [Jekyll](https://jekyllrb.com) on GitHub Pages.
+🌐 Website für die MeshCore Community im Münsterland — built with [Jekyll](https://jekyllrb.com) on GitHub Pages.
 
 ## Deployment
 
@@ -44,13 +44,13 @@ muenstermesh/
 Alle Inhalte stehen direkt in `index.md` als Markdown-Sektionen mit HTML-Section-Wrappern:
 
 - `#home` — Willkommens-Hero
-- `#meshtastic` — Was ist Meshtastic?
+- `#meshcore` — Was ist MeshCore?
 - `#karte` — Karte Münsterland
 - `#mitmachen` — Mitmachen
 
 ## Links
 
-- [Meshtastic](https://meshtastic.org)
+- [MeshCore](https://github.com/ripplebiz/MeshCore)
 - [Jekyll Documentation](https://jekyllrb.com/docs/)
 - [GitHub Pages](https://docs.github.com/en/pages)
 
