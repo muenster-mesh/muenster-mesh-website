@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Münster Mesh - Meshtastic Community</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌐 Münster Mesh</h1>
+            <p class="tagline">Dezentrales Mesh-Netzwerk im Münsterland</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#meshtastic">Was ist Meshtastic?</a></li>
+                <li><a href="#karte">Karte</a></li>
+                <li><a href="#mitmachen">Mitmachen</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="home" class="hero">
+            <h2>Willkommen bei Münster Mesh</h2>
+            <p>Wir bauen ein offenes, dezentrales Mesh-Netzwerk im Münsterland auf Basis von Meshtastic. Unabhängig von Internet und Mobilfunk können wir über große Entfernungen kommunizieren.</p>
+        </section>
+
+        <section id="meshtastic">
+            <h2>Was ist Meshtastic?</h2>
+            <div class="content-box">
+                <p><strong>Meshtastic</strong> ist ein Open-Source-Projekt, das es ermöglicht, kostengünstige LoRa-Funkgeräte zu einem dezentralen Mesh-Netzwerk zu verbinden.</p>
+                
+                <h3>Hauptmerkmale:</h3>
+                <ul>
+                    <li><strong>Lange Reichweite:</strong> LoRa-Technologie ermöglicht Kommunikation über mehrere Kilometer (bis zu 10+ km in der Stadt, 50+ km auf dem Land)</li>
+                    <li><strong>Geringer Stromverbrauch:</strong> Batterielaufzeit von Tagen bis Wochen</li>
+                    <li><strong>Mesh-Technologie:</strong> Nachrichten werden automatisch über andere Knoten weitergeleitet</li>
+                    <li><strong>Verschlüsselt:</strong> Ende-zu-Ende-Verschlüsselung für sichere Kommunikation</li>
+                    <li><strong>Offline-fähig:</strong> Funktioniert komplett ohne Internet oder Mobilfunknetz</li>
+                    <li><strong>Open Source:</strong> Freie Software und offene Hardware-Designs</li>
+                </ul>
+
+                <h3>Anwendungsfälle:</h3>
+                <ul>
+                    <li>Kommunikation bei Outdoor-Aktivitäten (Wandern, Radfahren)</li>
+                    <li>Notfallkommunikation bei Katastrophen</li>
+                    <li>Community-Netzwerke in der Stadt und auf dem Land</li>
+                    <li>IoT-Sensoren und Tracking</li>
+                    <li>Experimente mit Funktechnologie</li>
+                </ul>
+
+                <h3>Hardware:</h3>
+                <p>Meshtastic läuft auf kostengünstigen ESP32-basierten LoRa-Boards wie:</p>
+                <ul>
+                    <li>LILYGO T-Beam</li>
+                    <li>LILYGO T-Echo</li>
+                    <li>Heltec LoRa 32</li>
+                    <li>RAK WisBlock Meshtastic Starter Kit</li>
+                </ul>
+                <p class="note">Kosten: Ab ca. 30-50€ pro Gerät</p>
+            </div>
+        </section>
+
+        <section id="karte">
+            <h2>Karte Münsterland</h2>
+            <div class="content-box">
+                <div id="map-container">
+                    <div class="map-placeholder">
+                        <p>🗺️ Interaktive Karte der Meshtastic-Knoten im Münsterland</p>
+                        <p class="note">Hier kann eine Karte mit den aktiven Mesh-Knoten integriert werden.<br>
+                        Mögliche Integrationen:</p>
+                        <ul>
+                            <li><a href="https://meshtastic.org/docs/overview/map/" target="_blank">Meshtastic Map</a></li>
+                            <li>OpenStreetMap mit benutzerdefinierten Markern</li>
+                            <li>Leaflet.js für interaktive Karten</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Abgedeckte Bereiche (Beispiel):</h3>
+                <ul>
+                    <li>📍 Münster Innenstadt</li>
+                    <li>📍 Münster-Hiltrup</li>
+                    <li>📍 Gievenbeck</li>
+                    <li>📍 Telgte</li>
+                    <li>📍 Warendorf</li>
+                </ul>
+                <p class="note">Die Abdeckung wächst mit jedem neuen Knoten im Netzwerk!</p>
+            </div>
+        </section>
+
+        <section id="mitmachen">
+            <h2>Mitmachen</h2>
+            <div class="content-box">
+                <h3>So kannst du Teil des Münster Mesh werden:</h3>
+                <ol>
+                    <li><strong>Hardware besorgen:</strong> Kaufe ein kompatibles LoRa-Board (siehe oben)</li>
+                    <li><strong>Firmware flashen:</strong> Installiere die Meshtastic-Firmware auf deinem Gerät</li>
+                    <li><strong>Konfigurieren:</strong> Stelle die Region auf EU868 und wähle einen Knotennamen</li>
+                    <li><strong>Aufstellen:</strong> Platziere dein Gerät an einem erhöhten Ort für beste Reichweite</li>
+                    <li><strong>Vernetzen:</strong> Tritt unserer Community bei und tausche dich aus</li>
+                </ol>
+
+                <h3>Community:</h3>
+                <p>Vernetze dich mit anderen Meshtastic-Enthusiasten im Münsterland:</p>
+                <ul>
+                    <li>💬 Matrix/Discord (Link einfügen)</li>
+                    <li>📧 E-Mail: info@muenster-mesh.de (Beispiel)</li>
+                    <li>🐙 GitHub: <a href="https://github.com/yourusername/muenstermesh" target="_blank">github.com/yourusername/muenstermesh</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Münster Mesh Community | 
+            <a href="https://meshtastic.org" target="_blank">Meshtastic.org</a> | 
+            <a href="https://github.com/meshtastic" target="_blank">GitHub</a></p>
+            <p class="small">Diese Website wird mit ❤️ von der Community betrieben</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
