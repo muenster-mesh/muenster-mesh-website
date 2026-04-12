@@ -7,7 +7,8 @@ title: Münster Mesh
 <h2>Willkommen bei Münster Mesh</h2>
 <div class="content-box" markdown="1">
 
-Wir bauen ein offenes, dezentrales Mesh-Netzwerk im Münsterland auf Basis von **MeshCore**. Unabhängig von Internet und Mobilfunk können wir über große Entfernungen kommunizieren — mit intelligentem Routing und minimaler Latenz.
+Wir bauen ein offenes, dezentrales Mesh-Netzwerk im Münsterland auf Basis von **MeshCore**.
+Unabhängig von Internet und Mobilfunk können wir über große Entfernungen kommunizieren — mit intelligentem Routing und minimaler Latenz.
 
 </div>
 </section>
@@ -20,13 +21,13 @@ Wir bauen ein offenes, dezentrales Mesh-Netzwerk im Münsterland auf Basis von *
 
 ### Hauptmerkmale
 
+- **Offline-fähig:** Verschickt Kurznachrichten komplett ohne Internet oder Mobilfunknetz
 - **Lange Reichweite:** LoRa-Technologie ermöglicht Kommunikation über mehrere Kilometer — bis zu 10+ km in der Stadt, 50+ km auf dem Land
-- **Flood-basiertes Routing:** Nachrichten werden intelligent über das gesamte Netz weitergeleitet
-- **Rooms:** Gruppenkommunikation über benannte Räume — einfach und flexibel
-- **Geringer Stromverbrauch:** Batterielaufzeit von Tagen bis Wochen
+- **Mesh-Routing:** Nachrichten werden intelligent über das gesamte Netz weitergeleitet.
+- **Rooms:** Gruppenkommunikation über sog. Room Server
+- **Geringer Stromverbrauch:** Batterielaufzeit von Tagen bis Wochen, einfach unabhängig vom Stromnetz betreibbar
 - **Verschlüsselt:** Sichere Kommunikation zwischen den Knoten
-- **Offline-fähig:** Funktioniert komplett ohne Internet oder Mobilfunknetz
-- **Repeater-Modus:** Knoten können als reine Repeater für größere Netzabdeckung arbeiten
+- **Solar Repeater:** Weiterleitung von Nachrichten über Solarpanel-betriebene Repeater - Protokoll erlaubt bis zu 64 Hops und damit extrem große Reichweite
 - **Open Source:** Freie Software und offene Hardware-Designs
 
 ### Anwendungsfälle
