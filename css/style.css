@@ -230,11 +230,6 @@ section h3 {
     font-size: 0.95rem;
 }
 
-.small {
-    font-size: 0.85rem;
-    opacity: 0.8;
-}
-
 /* Links */
 a {
     color: var(--accent-color);
