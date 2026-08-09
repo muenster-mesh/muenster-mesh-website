@@ -6,19 +6,22 @@
 
 Kein Build-Pipeline nötig! GitHub Pages baut Jekyll automatisch.
 
-1. Repository auf GitHub pushen
+1. `main` nach GitHub pushen
 2. **Settings → Pages → Source:** "Deploy from a branch" → `main` / `/ (root)`
-3. Fertig — die Seite erscheint unter `https://<username>.github.io/muenstermesh/`
+3. Die Seite erscheint unter `https://<username>.github.io/muenstermesh/`
 
 ### Lokal testen (optional)
 
+Am einfachsten mit Docker — keine Ruby-Installation nötig:
+
 ```bash
-gem install bundler jekyll
-bundle init
-bundle add jekyll
-bundle exec jekyll serve
+docker compose up
 # → http://localhost:4000/muenstermesh/
 ```
+
+Live-Reload ist aktiv: Änderungen an den Quelldateien werden automatisch neu gebaut.
+Nach Änderungen am `Gemfile` einmal neu bauen mit `docker compose up --build`.
+
 
 ## Projektstruktur
 
