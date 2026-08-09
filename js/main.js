@@ -1,3 +1,21 @@
+// Mobile burger menu toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('#nav-menu');
+
+function closeMenu() {
+    navToggle.classList.remove('open');
+    navMenu.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+}
+
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+        const isOpen = navMenu.classList.toggle('open');
+        navToggle.classList.toggle('open', isOpen);
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+}
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -9,6 +27,7 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
         }
+        closeMenu();
     });
 });
 
