@@ -38,57 +38,64 @@ Unabhängig von Internet und Mobilfunk können wir über große Entfernungen kom
 - IoT-Sensoren und Telemetrie
 - Experimente mit Funktechnologie und Mesh-Routing
 
-### Hardware
+</div>
+</section>
 
-MeshCore läuft auf kostengünstigen ESP32-basierten LoRa-Boards wie:
+<section id="hardware">
+<h2>Hardware</h2>
+<div class="content-box" markdown="1">
 
-- **LILYGO T-Beam** — GPS integriert, ca. 35–45 €
-- **LILYGO T-Echo** — E-Ink Display, sehr energiesparend, ca. 50–60 €
-- **Heltec LoRa 32** — OLED Display, kompakt, ca. 30–40 €
-- **RAK WisBlock** — Modulares System, ca. 60–80 €
+MeshCore läuft auf kostengünstigen LoRa-Boards wie:
 
-<p class="note">Kosten: Ab ca. 30–50 € pro Gerät. Mehr Infos auf <a href="https://github.com/ripplebiz/MeshCore" target="_blank">github.com/ripplebiz/MeshCore</a></p>
+<div class="hardware-grid">
+    <div class="hardware-card">
+        <img src="{{ '/assets/images/t1000-e.jpg' | relative_url }}" alt="T1000-E">
+        <p><strong><a href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html" target="_blank">T1000-E</a></strong>
+        <span class="hardware-details">• Wasserdichter, dünner Node mit Batterie
+        <br>• MeshCore-Modul fürs Smartphone
+        <br>• ca. 40€</span>
+        </p>
+    </div>
+    <div class="hardware-card">
+        <img src="{{ '/assets/images/t-deck.jpg' | relative_url }}" alt="T-Deck">
+        <p><strong><a href="https://lilygo.cc/products/t-deck" target="_blank">T-Deck</a></strong>
+        <span class="hardware-details">• Vollwertiges Gerät mit Tastatur und Display
+        <br>• Unabhängiger Betrieb ohne Smartphone
+        <br>• ca. 90€</span>
+        </p>
+    </div>
+    <div class="hardware-card">
+        <img src="{{ '/assets/images/solar-node.jpg' | relative_url }}" alt="Solar Node P1-Pro">
+        <p><strong><a href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshcore-p-6741.html" target="_blank">Solar Node P1-Pro</a></strong>
+        <span class="hardware-details">• Solarbetriebener Outdoor-Repeater
+        <br>• Empfangsverstärker an Balkon oder Dach
+        <br>• ca. 100€</span>
+        </p>
+    </div>
+</div>
+
+<p class="note">Mehr Infos zur Hardware-Auswahl: <a href="https://hansemesh.de/geraete/" target="_blank">hansemesh.de/geraete</a></p>
 
 </div>
 </section>
 
 <section id="karte">
-<h2>Karte Münsterland</h2>
+<h2>Karte Münster-Mesh</h2>
 <div class="content-box" markdown="1">
 
+Auf dieser Karte siehst du alle MeshCore-Knoten, die im Münsterland und darüber hinaus aktiv sind.
+Jeder Punkt steht für einen Knoten oder Repeater, die gemeinsam das MeshCore-Netz in Münster bilden.
+
 <div id="map-container">
-    <div class="map-placeholder">
-        <p>🗺️ Interaktive Karte der MeshCore-Knoten im Münsterland</p>
-        <p class="note">Hier kann eine Karte mit den aktiven Mesh-Knoten integriert werden.<br>
-            Mögliche Integrationen:</p>
-        <ul>
-            <li>OpenStreetMap mit benutzerdefinierten Markern</li>
-            <li>Leaflet.js für interaktive Karten</li>
-        </ul>
-    </div>
+    <iframe
+        src="https://map.meshcore.io/?zoom=12&amp;lat=51.9612&amp;lon=7.6254"
+        title="MeshCore-Knotenkarte Münsterland"
+        width="100%"
+        height="600"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
 </div>
-
-### Abgedeckte Bereiche
-
-- 📍 **Münster Innenstadt** — Aktiv, mehrere Knoten
-- 📍 **Gievenbeck** — Aktiv, Universitätsbereich
-- 📍 **Münster-Hiltrup** — Geplant
-- 📍 **Telgte** — In Aufbau
-- 📍 **Warendorf** — Geplant
-- 📍 **Coesfeld** — Geplant
-- 📍 **Steinfurt** — In Planung
-
-### Reichweite
-
-| Bereich | Typische Reichweite |
-|---|---|
-| Direkte Stadtverbindung | 2–5 km |
-| Mit Hindernissen | 1–3 km |
-| Erhöhte Punkte | bis 10 km |
-| Ländlich, freie Sicht | 10–20 km |
-| Optimale Bedingungen | bis 50 km |
-
-<p class="note">Die Abdeckung wächst mit jedem neuen Knoten im Netzwerk!</p>
 
 </div>
 </section>
