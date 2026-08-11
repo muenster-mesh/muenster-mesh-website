@@ -3,8 +3,8 @@ layout: default
 title: Münster Mesh
 ---
 
-<section id="home" class="hero">
-<h2>Willkommen bei Münster Mesh</h2>
+<section id="muenster-mesh">
+<h2>Münster Mesh</h2>
 <div class="content-box" markdown="1">
 
 Wir bauen ein offenes, dezentrales Mesh-Netzwerk im Münsterland auf Basis von **MeshCore**.
@@ -14,7 +14,7 @@ Unabhängig von Internet und Mobilfunk können wir über große Entfernungen kom
 </section>
 
 <section id="meshcore">
-<h2>Was ist MeshCore?</h2>
+<h2>MeshCore</h2>
 <div class="content-box" markdown="1">
 
 **MeshCore** ist eine Open-Source-Firmware für LoRa-Funkgeräte, die ein leistungsfähiges dezentrales Mesh-Netzwerk ermöglicht. MeshCore setzt auf ein schlankes, effizientes Protokoll mit Fokus auf zuverlässiges Routing und niedrigen Overhead.
