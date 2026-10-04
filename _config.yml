@@ -1,7 +1,7 @@
 title: Münster Mesh
 description: Dezentrales MeshCore-Netzwerk im Münsterland
-url: "https://yourusername.github.io" # TODO: set your real GitHub username
-baseurl: "/muenstermesh"
+url: "https://muenster-mesh.de"
+baseurl: ""
 lang: de
 
 # Build
