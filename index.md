@@ -112,19 +112,5 @@ Jeder Punkt steht für einen Knoten oder Repeater, die gemeinsam das MeshCore-Ne
 4. **Aufstellen:** Platziere dein Gerät an einem erhöhten Ort für beste Reichweite
 5. **Vernetzen:** Tritt unserer Community bei und tausche dich aus
 
-### Ressourcen
-
-- 📖 [MeshCore auf GitHub](https://github.com/ripplebiz/MeshCore)
-- 📱 [MeshCore Companion App](https://github.com/ripplebiz/MeshCore#companion-app)
-- 💬 [MeshCore Discord](https://discord.gg/meshcore)
-
-### Community
-
-Vernetze dich mit anderen MeshCore-Enthusiasten im Münsterland:
-
-- 💬 Matrix/Discord (Link einfügen)
-- 📧 E-Mail: info@muenster-mesh.de
-- 🐙 GitHub: [github.com/yourusername/muenstermesh](https://github.com/yourusername/muenstermesh)
-
 </div>
 </section>
