@@ -17,26 +17,21 @@ Unabhängig von Internet und Mobilfunk können wir über große Entfernungen kom
 <h2>MeshCore</h2>
 <div class="content-box" markdown="1">
 
-**MeshCore** ist eine Open-Source-Firmware für LoRa-Funkgeräte, die ein leistungsfähiges dezentrales Mesh-Netzwerk ermöglicht. MeshCore setzt auf ein schlankes, effizientes Protokoll mit Fokus auf zuverlässiges Routing und niedrigen Overhead.
+**MeshCore** ist ein freies Funknetz, das ein ausfallsicheres versenden von Kurznachrichten ermöglicht.
 
-### Hauptmerkmale
+### Vorteile
 
-- **Offline-fähig:** Verschickt Kurznachrichten komplett ohne Internet oder Mobilfunknetz
-- **Lange Reichweite:** LoRa-Technologie ermöglicht Kommunikation über mehrere Kilometer — bis zu 10+ km in der Stadt, 50+ km auf dem Land
-- **Mesh-Routing:** Nachrichten werden intelligent über das gesamte Netz weitergeleitet.
-- **Rooms:** Gruppenkommunikation über sog. Room Server
-- **Geringer Stromverbrauch:** Batterielaufzeit von Tagen bis Wochen, einfach unabhängig vom Stromnetz betreibbar
-- **Verschlüsselt:** Sichere Kommunikation zwischen den Knoten
-- **Solar Repeater:** Weiterleitung von Nachrichten über Solarpanel-betriebene Repeater - Protokoll erlaubt bis zu 64 Hops und damit extrem große Reichweite
-- **Open Source:** Freie Software und offene Hardware-Designs
+- **Offline-fähig:** Verschickt Kurznachrichten komplett ohne Internet oder Mobilfunknetz.
+- **Große Reichweite:** Durch LoRa-Funktechnik und Mesh-Weiterleitung ermöglicht Kommunikation über mehrere hundert Kilometer.
+- **Unabhängig vom Stromnetz:** Nachrichten werden über sog. Repeater mit Solarpanels weitergeleitet. Damit ist Meshcore unabhängig vom Stromnetz.
+- **Geringer Stromverbrauch:** Endgeräte haben Batterielaufzeit von Tagen bis Wochen, und lassen sich von einfachen USB-Powerbanks laden oder betreiben.
+- **Sichere Kommunikation:** Die MeshCore-Kurznachrichten sind signiert und verschlüsselt.
 
 ### Anwendungsfälle
 
 - Kommunikation bei Outdoor-Aktivitäten (Wandern, Radfahren)
-- Notfallkommunikation bei Katastrophen
-- Community-Netzwerke in der Stadt und auf dem Land
-- IoT-Sensoren und Telemetrie
-- Experimente mit Funktechnologie und Mesh-Routing
+- Sensoren, Telemetrie oder Anbindung an Smart-Home-Systeme
+- Kommunikation selbst bei Ausfall von Strom oder Internet
 
 </div>
 </section>
