@@ -1,4 +1,4 @@
-# Münster Mesh
+# Münster-Mesh
 
 🌐 Website für die MeshCore Community im Münsterland — built with [Jekyll](https://jekyllrb.com) on GitHub Pages.
 

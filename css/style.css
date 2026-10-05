@@ -204,6 +204,47 @@ section h3 {
     background-color: rgba(44, 95, 45, 0.05);
 }
 
+/* FAQ */
+.faq details {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.faq details:last-child {
+    border-bottom: none;
+}
+
+.faq summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 1rem 2rem 1rem 0;
+    position: relative;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary::after {
+    content: "+";
+    position: absolute;
+    right: 0.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    transition: transform 0.2s ease;
+}
+
+.faq details[open] summary::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq details p {
+    padding-bottom: 1rem;
+}
+
 /* Hardware Grid */
 .hardware-grid {
     display: grid;
