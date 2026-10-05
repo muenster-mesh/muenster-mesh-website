@@ -41,6 +41,42 @@ Unabhängig von Internet und Mobilfunk können wir über große Entfernungen kom
 </div>
 </section>
 
+<section id="karte">
+<h2>Karte Münster-Mesh</h2>
+<div class="content-box" markdown="1">
+
+Auf dieser Karte siehst du alle MeshCore-Knoten, die im Münsterland und darüber hinaus aktiv sind.
+Jeder Punkt steht für einen Knoten oder Repeater, die gemeinsam das MeshCore-Netz in Münster bilden.
+
+<div id="map-container">
+    <iframe
+        src="https://map.meshcore.io/?zoom=12&amp;lat=51.9612&amp;lon=7.6254"
+        title="MeshCore-Knotenkarte Münsterland"
+        width="100%"
+        height="600"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+</div>
+
+</div>
+</section>
+
+<section id="mitmachen">
+<h2>Mitmachen</h2>
+<div class="content-box" markdown="1">
+
+### So kannst du Teil des Münster Mesh werden
+
+1. **Hardware besorgen:** Kaufe ein kompatibles LoRa-Board (siehe unten)
+2. **Firmware flashen:** Installiere die [MeshCore-Firmware](https://github.com/ripplebiz/MeshCore) auf deinem Gerät
+3. **Konfigurieren:** Stelle die Region auf **EU868** und wähle einen Knotennamen
+4. **Aufstellen:** Platziere dein Gerät an einem erhöhten Ort für beste Reichweite
+5. **Vernetzen:** Tritt unserer Community bei und tausche dich aus
+
+</div>
+</section>
+
 <section id="hardware">
 <h2>Hardware</h2>
 <div class="content-box" markdown="1">
@@ -75,42 +111,6 @@ MeshCore läuft auf kostengünstigen LoRa-Boards wie:
 </div>
 
 <p class="note">Mehr Infos zur Hardware-Auswahl: <a href="https://hansemesh.de/geraete/" target="_blank">hansemesh.de/geraete</a></p>
-
-</div>
-</section>
-
-<section id="karte">
-<h2>Karte Münster-Mesh</h2>
-<div class="content-box" markdown="1">
-
-Auf dieser Karte siehst du alle MeshCore-Knoten, die im Münsterland und darüber hinaus aktiv sind.
-Jeder Punkt steht für einen Knoten oder Repeater, die gemeinsam das MeshCore-Netz in Münster bilden.
-
-<div id="map-container">
-    <iframe
-        src="https://map.meshcore.io/?zoom=12&amp;lat=51.9612&amp;lon=7.6254"
-        title="MeshCore-Knotenkarte Münsterland"
-        width="100%"
-        height="600"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        allowfullscreen></iframe>
-</div>
-
-</div>
-</section>
-
-<section id="mitmachen">
-<h2>Mitmachen</h2>
-<div class="content-box" markdown="1">
-
-### So kannst du Teil des Münster Mesh werden
-
-1. **Hardware besorgen:** Kaufe ein kompatibles LoRa-Board (siehe oben)
-2. **Firmware flashen:** Installiere die [MeshCore-Firmware](https://github.com/ripplebiz/MeshCore) auf deinem Gerät
-3. **Konfigurieren:** Stelle die Region auf **EU868** und wähle einen Knotennamen
-4. **Aufstellen:** Platziere dein Gerät an einem erhöhten Ort für beste Reichweite
-5. **Vernetzen:** Tritt unserer Community bei und tausche dich aus
 
 </div>
 </section>
