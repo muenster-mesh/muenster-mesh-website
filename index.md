@@ -68,7 +68,7 @@ Jeder Punkt steht für einen Knoten oder Repeater, die gemeinsam das MeshCore-Ne
 
 ### So kannst du Teil des Münster Mesh werden
 
-1. **Hardware besorgen:** Kaufe ein kompatibles LoRa-Board (siehe unten)
+1. **Hardware besorgen:** Kaufe ein kompatibles LoRa-Board (siehe [Hardware](#hardware))
 2. **Firmware flashen:** Installiere die [MeshCore-Firmware](https://github.com/ripplebiz/MeshCore) auf deinem Gerät
 3. **Konfigurieren:** Stelle die Region auf **EU868** und wähle einen Knotennamen
 4. **Aufstellen:** Platziere dein Gerät an einem erhöhten Ort für beste Reichweite
