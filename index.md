@@ -22,10 +22,10 @@ Unabhängig von Internet und Mobilfunk können wir über große Entfernungen kom
 </section>
 
 <section id="meshcore">
-<h2>MeshCore</h2>
+<h2>Was ist MeshCore?</h2>
 <div class="content-box" markdown="1">
 
-**MeshCore** ist ein freies Funknetz, das ein ausfallsicheres versenden von Kurznachrichten ermöglicht.
+**MeshCore** ist ein freies Funknetz, das ein ausfallsicheres versenden von Kurznachrichten ermöglicht. Siehe weitere Infos unter [FAQ](#faq).
 
 ### Vorteile
 
@@ -45,62 +45,7 @@ Unabhängig von Internet und Mobilfunk können wir über große Entfernungen kom
 </div>
 </section>
 
-<section id="faq">
-<h2>FAQ</h2>
-<div class="content-box faq">
-
-<details>
-<summary>Was ist ein Mesh-Netzwerk?</summary>
-<p>In einem Mesh-Netzwerk sind Geräte direkt miteinander verbunden, statt über einen zentralen Server oder Funkmast zu kommunizieren. Jedes Gerät kann Nachrichten für andere weiterreichen, sodass eine Nachricht über mehrere Stationen hinweg ihr Ziel erreicht. Fällt ein Knoten aus, sucht sich die Nachricht einfach einen anderen Weg.</p>
-</details>
-
-<details>
-<summary>Was ist LoRa?</summary>
-<p>LoRa (Long Range) ist eine Funktechnik, die mit sehr wenig Energie kleine Datenmengen über große Entfernungen überträgt — je nach Gelände mehrere Kilometer, bei freier Sicht auch deutlich mehr. In Europa nutzt LoRa das lizenzfreie 868-MHz-Band, das jeder ohne Anmeldung oder Gebühren verwenden darf.</p>
-</details>
-
-<details>
-<summary>Was unterscheidet MeshCore von Meshtastic?</summary>
-<p>Beide Projekte bauen Mesh-Netze auf LoRa-Basis. Bei Meshtastic leitet grundsätzlich jedes Gerät Nachrichten weiter, was in größeren Netzen schnell zu überlasteten Funkkanälen führt. MeshCore trennt dagegen zwischen Endgeräten (Companions) und fest installierten Repeatern, die gezielt weiterleiten. Dadurch skaliert das Netz besser und Nachrichten kommen zuverlässiger an.</p>
-</details>
-
-<details>
-<summary>Was brauche ich, um mitzumachen?</summary>
-<p>Ein kompatibles LoRa-Gerät (siehe <a href="#hardware">Hardware</a>) und in den meisten Fällen ein Smartphone mit der MeshCore-App. Geräte wie das T-Deck mit eigener Tastatur und Display funktionieren auch ganz ohne Smartphone.</p>
-</details>
-
-<details>
-<summary>Was ist der Unterschied zwischen Companion und Repeater?</summary>
-<p>Ein <strong>Companion</strong> ist dein persönliches Gerät, das du per Bluetooth mit deinem Smartphone verbindest, um Nachrichten zu schreiben und zu lesen. Ein <strong>Repeater</strong> ist ein fest installierter Knoten — idealerweise an einem hohen Standort — der Nachrichten anderer weiterleitet und so die Reichweite des Netzes vergrößert.</p>
-</details>
-
-<details>
-<summary>Wie weit reicht ein Gerät?</summary>
-<p>Das hängt stark vom Standort ab. In der Stadt mit vielen Gebäuden sind es oft nur ein bis wenige Kilometer, von einem Dach oder Hügel mit freier Sicht können es zehn Kilometer und mehr sein. Über mehrere Repeater hinweg lassen sich so auch sehr große Entfernungen überbrücken.</p>
-</details>
-
-<details>
-<summary>Kostet die Nutzung etwas?</summary>
-<p>Nein. Abgesehen von der einmaligen Anschaffung der Hardware fallen keine laufenden Kosten an — kein Vertrag, keine SIM-Karte, keine Gebühren. Die MeshCore-Firmware ist freie Software.</p>
-</details>
-
-<details>
-<summary>Ist das legal?</summary>
-<p>Ja. MeshCore nutzt das lizenzfreie 868-MHz-Band, das in Europa für solche Anwendungen freigegeben ist. Wichtig ist, dass dein Gerät auf die Region <strong>EU868</strong> eingestellt ist, damit die erlaubten Sendeleistungen und Sendezeiten eingehalten werden.</p>
-</details>
-
-<details>
-<summary>Wie sicher sind meine Nachrichten?</summary>
-<p>Direktnachrichten zwischen zwei Teilnehmern sind Ende-zu-Ende-verschlüsselt und signiert, sodass nur der Empfänger sie lesen kann. Nachrichten in öffentlichen Kanälen kann dagegen jeder im Netz mitlesen — dort solltest du keine privaten Informationen teilen.</p>
-</details>
-
-<details>
-<summary>Wie kann ich das Netz in Münster unterstützen?</summary>
-<p>Am meisten hilft ein zusätzlicher Repeater an einem erhöhten Standort, etwa auf einem Dach oder Balkon. Aber auch jeder neue Teilnehmer mit einem Companion-Gerät belebt das Netz. Wie du einsteigst, erfährst du unter <a href="#mitmachen">Mitmachen</a>.</p>
-</details>
-
-</div>
-</section>
+{% include faq.html %}
 
 <section id="karte">
 <h2>Karte Münster-Mesh</h2>
@@ -129,11 +74,11 @@ Jeder Punkt steht für einen Knoten oder Repeater, die gemeinsam das MeshCore-Ne
 
 ### So kannst du Teil des Münster Mesh werden
 
-1. **Hardware besorgen:** Kaufe ein kompatibles LoRa-Board (siehe [Hardware](#hardware))
-2. **Firmware flashen:** Installiere die [MeshCore-Firmware](https://github.com/ripplebiz/MeshCore) auf deinem Gerät
-3. **Konfigurieren:** Stelle die Region auf **EU868** und wähle einen Knotennamen
-4. **Aufstellen:** Platziere dein Gerät an einem erhöhten Ort für beste Reichweite
-5. **Vernetzen:** Tritt unserer Community bei und tausche dich aus
+1. **Hardware besorgen:** Kaufe ein kompatibles LoRa-Board, siehe [Hardware](#hardware).
+2. **Firmware flashen:** Installiere die [MeshCore-Firmware](https://flasher.meshcore.io/) auf deinem Gerät.
+3. **Konfigurieren:** Stelle die Region auf **EU868** und wähle einen Knotennamen.
+4. **Aufstellen:** Platziere dein Gerät an einem erhöhten Ort für beste Reichweite.
+5. **Vernetzen:** Tritt unserer Community bei und tausche dich aus.
 
 </div>
 </section>
