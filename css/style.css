@@ -245,6 +245,24 @@ section h3 {
     padding-bottom: 1rem;
 }
 
+.faq figure {
+    margin: 0 0 1rem;
+}
+
+.faq figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.faq figcaption {
+    font-size: 0.8rem;
+    color: #666;
+    text-align: right;
+    margin-top: 0.25rem;
+}
+
 /* Hardware Grid */
 .hardware-grid {
     display: grid;

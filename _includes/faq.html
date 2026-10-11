@@ -1,11 +1,24 @@
 <section id="faq">
-<h2>FAQ</h2>
-<div class="content-box faq">
+    <h2>FAQ</h2>
+    <div class="content-box faq">
 
-<details>
-<summary>Was ist ein Mesh-Netzwerk?</summary>
-<p>In einem Mesh-Netzwerk sind Geräte direkt miteinander verbunden, statt über einen zentralen Server oder Funkmast zu kommunizieren. Jedes Gerät kann Nachrichten für andere weiterreichen, sodass eine Nachricht über mehrere Stationen hinweg ihr Ziel erreicht. Fällt ein Knoten aus, sucht sich die Nachricht einfach einen anderen Weg.</p>
-</details>
+        <details>
+            <summary>Was ist das MeshCore-Mesh?</summary>
+            <p>Ein Funknetz, in dem Geräte direkt miteinander verbunden sind, statt über einen zentralen Server oder
+                Funkmast zu kommunizieren. Nachrichten werden von Gerät zu Gerät weitergereicht und erreichen so über
+                mehrere Stationen hinweg ihr Ziel. Fällt ein Knoten aus, sucht sich die Nachricht einfach einen anderen
+                Weg.</p>
+            <p>Im MeshCore-Mesh gibt es zwei Arten von Knoten: Ein <strong>Companion-Node</strong> ist dein
+                persönliches Gerät, das du z.B. per Bluetooth mit deinem Smartphone verbindest, um Nachrichten zu
+                schreiben und zu lesen. Ein <strong>Repeater</strong> ist ein fest installierter Knoten, idealerweise
+                an einem hohen Standort, der Nachrichten weiterleitet.</p>
+            <figure>
+                <img src="{{ '/assets/images/mesh-network.jpg' | relative_url }}"
+                    alt="Zwei Smartphones, jeweils per Bluetooth mit einem Companion verbunden; die Nachricht läuft über zwei Repeater von Companion 1 zu Companion 2">
+                <figcaption>© <a href="https://jrattechworks.com/meshcore-lora-mesh-network-guide/" target="_blank">JRat
+                        TechWorks</a></figcaption>
+            </figure>
+        </details>
 
 <details>
 <summary>Was ist LoRa?</summary>
@@ -17,15 +30,12 @@
 <p>Beide Projekte bauen Mesh-Netze auf LoRa-Basis. Bei Meshtastic leitet grundsätzlich jedes Gerät Nachrichten weiter, was in größeren Netzen schnell zu überlasteten Funkkanälen führt. MeshCore trennt dagegen zwischen Endgeräten (Companions) und fest installierten Repeatern, die gezielt weiterleiten. Dadurch skaliert das Netz besser und Nachrichten kommen zuverlässiger an.</p>
 </details>
 
-<details>
-<summary>Was brauche ich, um mitzumachen?</summary>
-<p>Ein kompatibles LoRa-Gerät (siehe <a href="#hardware">Hardware</a>) und in den meisten Fällen ein Smartphone mit der MeshCore-App. Geräte wie das T-Deck mit eigener Tastatur und Display funktionieren auch ganz ohne Smartphone.</p>
-</details>
-
-<details>
-<summary>Was ist der Unterschied zwischen Companion und Repeater?</summary>
-<p>Ein <strong>Companion</strong> ist dein persönliches Gerät, das du per Bluetooth mit deinem Smartphone verbindest, um Nachrichten zu schreiben und zu lesen. Ein <strong>Repeater</strong> ist ein fest installierter Knoten — idealerweise an einem hohen Standort — der Nachrichten anderer weiterleitet und so die Reichweite des Netzes vergrößert.</p>
-</details>
+        <details>
+            <summary>Was brauche ich, um mitzumachen?</summary>
+            <p>Ein kompatibles LoRa-Gerät (siehe <a href="#hardware">Hardware</a>) und in den meisten Fällen ein
+                Smartphone mit der MeshCore-App. Geräte wie das T-Deck mit eigener Tastatur und Display funktionieren
+                auch ganz ohne Smartphone.</p>
+        </details>
 
 <details>
 <summary>Wie weit reicht ein Gerät?</summary>
