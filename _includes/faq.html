@@ -51,6 +51,27 @@
                     alt="Funktechniken nach Reichweite und Datenrate: LoRa erreicht als einzige mesh-fähige, lizenzfreie Technik Reichweiten von 100 m bis über 100 km bei rund 10 kbit/s">
             </figure>
         </details>
+        <details>
+            <summary>Wie erreicht LoRa so hohe Reichweiten?</summary>
+            <p>LoRa nutzt eine Modulation namens <em>Chirp Spread Spectrum</em>: Jedes Symbol wird als „Chirp“ gesendet,
+                ein Ton, dessen Frequenz gleichmäßig über die gesamte Bandbreite ansteigt (Up-Chirp) oder abfällt
+                (Down-Chirp). Der Empfänger kennt dieses Muster und kann es selbst dann noch erkennen, wenn das Signal
+                deutlich schwächer ist als das Hintergrundrauschen. Auch Störungen auf einzelnen Frequenzen und
+                Reflexionen an Gebäuden bringen die Übertragung kaum aus dem Tritt.</p>
+            <p>Über den <strong>Spreading Factor</strong> (SF7 bis SF12) lässt sich die Länge eines Chirps einstellen.
+                Jede Stufe verdoppelt die Sendedauer: Höhere Spreading Factors reichen weiter und sind robuster, senden
+                aber langsamer. Niedrigere Spreading Factors sind schneller, haben dafür aber eine geringere
+                Reichweite.</p>
+            <figure>
+                <img src="{{ '/assets/images/lora-chirps.jpg' | relative_url }}"
+                    alt="Wasserfalldiagramm von LoRa-Chirps: Up- und Down-Chirps laufen über die Bandbreite; mit steigendem Spreading Factor von SF7 bis SF12 werden die Chirps länger">
+                <figcaption>Quelle: <a
+                        href="https://www.researchgate.net/publication/382262986_LoRaWAN_for_Smart_Street_Lighting_Solution_in_Pangandaran_Regency"
+                        target="_blank">LoRaWAN for Smart Street Lighting Solution in Pangandaran Regency</a>,
+                    DOI: <a href="https://doi.org/10.62527/joiv.7.4.1198" target="_blank">10.62527/joiv.7.4.1198</a>
+                </figcaption>
+            </figure>
+        </details>
 
 <details>
 <summary>Was unterscheidet MeshCore von Meshtastic?</summary>
