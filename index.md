@@ -72,7 +72,7 @@ Jeder Punkt steht für einen Knoten oder Repeater, die gemeinsam das MeshCore-Ne
 <h2>Mitmachen</h2>
 <div class="content-box" markdown="1">
 
-### So kannst du Teil des Münster Mesh werden
+### So kannst du Teil des Münster Meshs werden
 
 1. **Hardware besorgen:** Kaufe ein kompatibles LoRa-Board, siehe [Hardware](#hardware).
 2. **Firmware flashen:** Installiere die [MeshCore-Firmware](https://flasher.meshcore.io/) auf deinem Gerät.
