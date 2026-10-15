@@ -73,10 +73,150 @@
             </figure>
         </details>
 
-<details>
-<summary>Was unterscheidet MeshCore von Meshtastic?</summary>
-<p>Beide Projekte bauen Mesh-Netze auf LoRa-Basis. Bei Meshtastic leitet grundsätzlich jedes Gerät Nachrichten weiter, was in größeren Netzen schnell zu überlasteten Funkkanälen führt. MeshCore trennt dagegen zwischen Endgeräten (Companions) und fest installierten Repeatern, die gezielt weiterleiten. Dadurch skaliert das Netz besser und Nachrichten kommen zuverlässiger an.</p>
-</details>
+        <details>
+            <summary>Was unterscheidet MeshCore von Meshtastic?</summary>
+            <p>Beide Projekte bauen Mesh-Netze auf LoRa-Basis, verfolgen aber unterschiedliche Ansätze. Die Geräte
+                sind untereinander nicht kompatibel, laufen aber auf derselben Hardware: Wer wechseln will, spielt
+                einfach eine andere Firmware auf.</p>
+            <p><strong>Weiterleitung:</strong> Bei Meshtastic leitet grundsätzlich jedes Gerät empfangene Nachrichten
+                erneut weiter. Das funktioniert in kleinen Gruppen gut, führt in größeren Netzen aber schnell zu
+                überlasteten Funkkanälen. Deshalb ist die Zahl der Weiterleitungen meist auf wenige Sprünge begrenzt,
+                was die Reichweite des Netzes einschränkt. MeshCore trennt dagegen zwischen Endgeräten (Companions), die
+                nichts weiterleiten, und fest installierten Repeatern. Die erste Nachricht an einen Kontakt verbreitet
+                sich noch über das ganze Netz, dabei merkt sich MeshCore den gefundenen Weg. Folgende Nachrichten
+                laufen dann gezielt nur über die Repeater auf diesem Weg.</p>
+            <p><strong>Funkverkehr:</strong> Meshtastic-Geräte senden regelmäßig von sich aus Position, Telemetrie und
+                Geräteinformationen. MeshCore sendet dagegen fast nur, wenn tatsächlich eine Nachricht unterwegs ist.
+                Der Funkkanal bleibt so frei für das Wesentliche.</p>
+            <p>Dadurch skaliert MeshCore besser: Nachrichten kommen auch über viele Repeater und große Entfernungen
+                zuverlässig an. Meshtastic hat dafür die größere Community und bietet mehr Funktionen.</p>
+        </details>
+
+        <details>
+            <summary>Was unterscheidet MeshCore von MeshCom?</summary>
+            <p><a href="https://icssw.org/en/meshcom/" target="_blank">MeshCom</a> ist ein LoRa-Mesh aus dem
+                Amateurfunk, entwickelt vom österreichischen ICSSW und vor allem im deutschsprachigen Raum verbreitet.
+                Wer MeshCom nutzen will, braucht eine <strong>Amateurfunklizenz</strong> und sendet unter seinem
+                Rufzeichen. MeshCore dagegen darf jeder ohne Lizenz nutzen.</p>
+            <p>Beide Netze funken auf unterschiedlichen Frequenzen und können sich nicht gegenseitig empfangen:</p>
+            <ul>
+                <li><strong>MeshCom:</strong> 433,175&nbsp;MHz im 70-cm-Amateurfunkband.
+                    Funkamateure dürfen je nach Lizenzklasse mit deutlich mehr Leistung senden und unterliegen keiner
+                    Sendezeitbegrenzung.</li>
+                <li><strong>MeshCore:</strong> 869,618&nbsp;MHz im lizenzfreien 868-MHz-Band.</li>
+            </ul>
+            <p>Ein weiterer Unterschied: Im Amateurfunk ist Verschlüsselung verboten, alle Nachrichten im MeshCom-Netz
+                sind daher öffentlich lesbar. Dafür sind viele MeshCom-Knoten über Gateways mit dem Internet
+                verbunden, sodass Nachrichten auch weit entfernte Regionen erreichen.</p>
+        </details>
+
+        <details>
+            <summary>Was hat MeshCore mit LoRaWAN, TTN oder Helium zu tun?</summary>
+            <p>Alle nutzen dieselbe Funktechnik LoRa, sind aber für ganz andere Zwecke gebaut und untereinander nicht
+                kompatibel.</p>
+            <p><strong>LoRaWAN</strong> ist ein Protokoll für das Internet der Dinge: Sensoren wie Wasserzähler,
+                Parkplatzmelder oder Wetterstationen senden ihre Messwerte an Gateways in der Nähe. Diese reichen die
+                Daten über das Internet an einen zentralen Server weiter. Die Geräte sprechen nie direkt miteinander,
+                es entsteht also kein Mesh. Fällt das Internet oder der Server aus, steht das Netz still.</p>
+            <p><a href="https://www.thethingsnetwork.org/" target="_blank">The Things Network (TTN)</a> und
+                <a href="https://www.helium.com/" target="_blank">Helium</a> sind zwei öffentliche LoRaWAN-Netze:
+                TTN wird von einer Community getragen, die Gateways ehrenamtlich betreibt. Bei Helium werden die
+                Betreiber der Gateways mit Kryptowährung entlohnt.
+            </p>
+            <p>MeshCore dagegen ist für Textnachrichten zwischen Menschen gedacht und kommt ganz ohne Internet und
+                zentrale Server aus: Die Nachrichten springen direkt von Repeater zu Repeater.</p>
+        </details>
+
+        <details>
+            <summary>Was unterscheidet MeshCore von Reticulum?</summary>
+            <p><a href="https://reticulum.network/" target="_blank">Reticulum</a> ist kein reines LoRa-Projekt,
+                sondern ein vollständiger Netzwerk-Stack, gewissermaßen ein Ersatz für das Internetprotokoll. Er
+                funktioniert über beliebige Übertragungswege: LoRa, Packet Radio, WLAN, serielle Kabel oder das
+                Internet lassen sich in einem Netz kombinieren. Jede Verbindung ist dabei grundsätzlich
+                verschlüsselt, und Adressen sind kryptografische Schlüssel statt fester Gerätenummern.</p>
+            <p>Auf Reticulum laufen eigene Anwendungen wie <em>Sideband</em> oder <em>NomadNet</em>, die neben
+                Nachrichten auch Dateiübertragung, Sprachnachrichten oder sogar kleine Webseiten bieten. Der Preis
+                dafür ist eine aufwendigere Einrichtung und eine kleinere Community.</p>
+            <p>MeshCore konzentriert sich dagegen auf eine Aufgabe: Textnachrichten über LoRa. Die Firmware läuft
+                direkt auf günstigen Funkmodulen, Repeater arbeiten völlig eigenständig, und der Einstieg gelingt mit
+                wenigen Klicks in der App. Die beiden Netze sind untereinander nicht kompatibel.</p>
+        </details>
+
+        <details>
+            <summary>Wie ist MeshCore entstanden?</summary>
+            <p>MeshCore steht am Ende einer Entwicklung, in der LoRa vom Industriefunk zum Bürgerfunk wurde:</p>
+            <ol>
+                <li><strong>2012:</strong> Der Chiphersteller Semtech bringt die ersten LoRa-Chips
+                    auf den Markt. Damit wird LoRa für jeden verfügbar.</li>
+                <li><strong>2015:</strong> Die LoRa Alliance veröffentlicht LoRaWAN, ein Protokoll für Sensornetze
+                    mit zentralen Servern. Im selben Jahr deckt das Community-Projekt The Things Network ganz Amsterdam
+                    mit nur rund zehn Gateways ab.</li>
+                <li><strong>Ab etwa 2019:</strong> Funkamateure nutzen LoRa für eigene Zwecke: LoRa-APRS überträgt
+                    Positionsmeldungen, das österreichische MeshCom baut darauf ein Nachrichtennetz auf. Beides
+                    erfordert eine Amateurfunklizenz.</li>
+                <li><strong>2020:</strong> Meshtastic macht LoRa-Mesh für alle zugänglich: lizenzfrei, mit
+                    günstiger Hardware und einer Smartphone-App. Das Projekt wächst schnell, stößt in großen Netzen
+                    aber an Grenzen, weil jedes Gerät jede Nachricht weiterleitet.</li>
+                <li><strong>2024/2025:</strong> Der Australier Scott Powell veröffentlicht MeshCore. Feste Repeater
+                    und gezielte Weiterleitung sollen Netze ermöglichen, die ganze Regionen abdecken.</li>
+            </ol>
+        </details>
+
+        <details>
+            <summary>Darf ich meine Nachrichten verschlüsseln?</summary>
+            <p>Direktnachrichten zwischen zwei Teilnehmern sind Ende-zu-Ende-verschlüsselt und signiert, sodass nur der
+                Empfänger sie lesen kann.</p>
+            <p> Private Kanäle sind mit einem gemeinsamen Passwort verschlüsselt: Mitlesen kann nur,
+                wer dieses Passwort kennt. Nachrichten in öffentlichen Kanälen kann dagegen jeder im Netz mitlesen
+                — dort solltest du keine privaten Informationen teilen.</p>
+            <p>Repeater leiten verschlüsselte Nachrichten üblicherweise weiter, ohne sie selbst lesen zu können. So sind
+                auch über große Entfernungen und viele Zwischenstationen stark verschlüsselte Gespräche möglich.</p>
+        </details>
+
+        <details>
+            <summary>Ist das legal?</summary>
+            <p>Ja. MeshCore nutzt das lizenzfreie 868-MHz-Band, das in Europa für solche Anwendungen freigegeben ist.
+                Wichtig ist, dass dein Gerät auf die Region <strong>EU868</strong> eingestellt ist, damit die erlaubten
+                Sendeleistungen und Sendezeiten eingehalten werden.</p>
+            <p>Die Sendezeit regelt die Bundesnetzagentur über den <strong>Arbeitszyklus</strong>: den Anteil einer
+                Stunde, in dem ein Gerät in einem Frequenzband senden darf. Ein Arbeitszyklus von 1&nbsp;% bedeutet
+                also höchstens 36 Sekunden Sendezeit pro Stunde. Die Grenzen hängen vom Teilband ab: In weiten Teilen
+                des 868-MHz-Bands gelten 1&nbsp;% oder sogar nur 0,1&nbsp;%. Im Teilband 869,4–869,65&nbsp;MHz, das
+                MeshCore in Europa nutzt, sind dagegen 10&nbsp;% (6 Minuten pro Stunde) bei bis zu 500&nbsp;mW
+                erlaubt. Im 433-MHz-Band sind es 10&nbsp;% bei nur 10&nbsp;mW.</p>
+            <p>Quelle: <a
+                    href="https://www.bundesnetzagentur.de/DE/Fachthemen/Telekommunikation/Frequenzen/Allgemeinzuteilungen/_DL/vfg91_2025.pdf"
+                    target="_blank">Bundesnetzagentur, Vfg. 91/2025</a></p>
+        </details>
+
+        <details>
+            <summary>Wie schafft es MeshCore, mit so wenig Sendezeit zu arbeiten?</summary>
+            <p>Sendezeit ist das knappste Gut im Netz: Solange ein Gerät sendet, müssen alle anderen in Reichweite
+                schweigen. MeshCore spart deshalb an mehreren Stellen:</p>
+            <ul>
+                <li><strong>Nur Repeater leiten weiter:</strong> Companions senden nur ihre eigenen Nachrichten und
+                    reichen nichts weiter.</li>
+                <li><strong>Gelernte Wege:</strong> Die erste Nachricht an einen Kontakt verbreitet sich über das
+                    ganze Netz. Danach kennt MeshCore den Weg, und folgende Nachrichten laufen nur über die Repeater
+                    auf diesem Weg.</li>
+                <li><strong>Keine Duplikate:</strong> Jeder Repeater merkt sich, welche Nachrichten er schon
+                    weitergeleitet hat, und sendet keine davon ein zweites Mal.</li>
+                <li><strong>Wenig Hintergrundverkehr:</strong> Geräte melden sich nur selten von selbst im Netz,
+                    statt ständig Position oder Messwerte zu verbreiten.</li>
+                <li><strong>Begrenzte Reichweite:</strong> Repeater-Betreiber können festlegen, über wie viele
+                    Stationen sich eine Nachricht höchstens ausbreitet. Mit <em>Regionen</em> lässt sich außerdem
+                    steuern, dass eine Nachricht nur in einem bestimmten Gebiet weitergeleitet wird, etwa im
+                    Münsterland, statt das ganze Netz zu belasten.</li>
+                <li><strong>Eingebaute Pausen:</strong> Repeater legen nach jedem Senden automatisch eine Pause ein,
+                    damit sie den Funkkanal nicht dauerhaft belegen und die erlaubte Sendezeit einhalten.</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>Was kostet mich die Nutzung?</summary>
+            <p>Nein. Abgesehen von der einmaligen Anschaffung der Hardware fallen keine laufenden Kosten an — kein
+                Vertrag, keine SIM-Karte, keine Gebühren. Die MeshCore-Firmware ist freie Software.</p>
+        </details>
 
         <details>
             <summary>Was brauche ich, um mitzumachen?</summary>
@@ -85,30 +225,28 @@
                 auch ganz ohne Smartphone.</p>
         </details>
 
-<details>
-<summary>Wie weit reicht ein Gerät?</summary>
-<p>Das hängt stark vom Standort ab. In der Stadt mit vielen Gebäuden sind es oft nur ein bis wenige Kilometer, von einem Dach oder Hügel mit freier Sicht können es zehn Kilometer und mehr sein. Über mehrere Repeater hinweg lassen sich so auch sehr große Entfernungen überbrücken.</p>
-</details>
+        <details>
+            <summary>Welche Anfängerfehler sollte ich vermeiden?</summary>
+            <p><strong>Ungünstiger Standort:</strong> In einer Wohnung im Erdgeschoss oder hinter dicken Wänden
+                empfängst du oft keinen Repeater. Probiere es am Fenster, auf dem Balkon oder in einem höheren Stockwerk
+                —
+                schon wenige Meter Höhe machen einen großen Unterschied.</p>
+            <p><strong>Zu viel Koaxkabel:</strong> Beim Aufstellen eines Repeaters ist es verlockend, das Gerät
+                bequem im Haus zu lassen und die Antenne über ein langes Kabel anzuschließen. Bei 868&nbsp;MHz schlucken
+                schon wenige Meter dünnes Koaxkabel einen großen Teil des Signals. Besser ist es, das Gerät direkt an
+                der
+                Antenne zu montieren und das Kabel so kurz wie möglich zu halten.</p>
+            <p><strong>Antenne vergessen:</strong> Schließe die Antenne immer an, bevor du das Gerät zum ersten Mal
+                einschaltest. Sendet das Funkmodul ohne Antenne, kann die Sendeleistung nicht abgestrahlt werden und das
+                Modul dauerhaft beschädigen.</p>
+        </details>
 
-<details>
-<summary>Kostet die Nutzung etwas?</summary>
-<p>Nein. Abgesehen von der einmaligen Anschaffung der Hardware fallen keine laufenden Kosten an — kein Vertrag, keine SIM-Karte, keine Gebühren. Die MeshCore-Firmware ist freie Software.</p>
-</details>
+        <details>
+            <summary>Wie kann ich das Netz in Münster unterstützen?</summary>
+            <p>Am meisten hilft ein zusätzlicher Repeater an einem erhöhten Standort, etwa auf einem Dach oder Balkon.
+                Aber auch jeder neue Teilnehmer mit einem Companion-Gerät belebt das Netz. Wie du einsteigst, erfährst
+                du unter <a href="#mitmachen">Mitmachen</a>.</p>
+        </details>
 
-<details>
-<summary>Ist das legal?</summary>
-<p>Ja. MeshCore nutzt das lizenzfreie 868-MHz-Band, das in Europa für solche Anwendungen freigegeben ist. Wichtig ist, dass dein Gerät auf die Region <strong>EU868</strong> eingestellt ist, damit die erlaubten Sendeleistungen und Sendezeiten eingehalten werden.</p>
-</details>
-
-<details>
-<summary>Wie sicher sind meine Nachrichten?</summary>
-<p>Direktnachrichten zwischen zwei Teilnehmern sind Ende-zu-Ende-verschlüsselt und signiert, sodass nur der Empfänger sie lesen kann. Nachrichten in öffentlichen Kanälen kann dagegen jeder im Netz mitlesen — dort solltest du keine privaten Informationen teilen.</p>
-</details>
-
-<details>
-<summary>Wie kann ich das Netz in Münster unterstützen?</summary>
-<p>Am meisten hilft ein zusätzlicher Repeater an einem erhöhten Standort, etwa auf einem Dach oder Balkon. Aber auch jeder neue Teilnehmer mit einem Companion-Gerät belebt das Netz. Wie du einsteigst, erfährst du unter <a href="#mitmachen">Mitmachen</a>.</p>
-</details>
-
-</div>
+    </div>
 </section>
