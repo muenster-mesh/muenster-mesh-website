@@ -31,16 +31,16 @@ Unabhängig von Internet und Mobilfunk können wir über große Entfernungen kom
 
 - **Offline-fähig:** Verschickt Kurznachrichten komplett ohne Internet oder Mobilfunknetz.
 - **Große Reichweite:** Durch LoRa-Funktechnik und Mesh-Weiterleitung ermöglicht Kommunikation über mehrere hundert Kilometer.
-- **Unabhängig vom Stromnetz:** Nachrichten werden über sog. Repeater mit Solarpanels weitergeleitet. Damit ist Meshcore unabhängig vom Stromnetz.
-- **Geringer Stromverbrauch:** Endgeräte haben Batterielaufzeit von Tagen bis Wochen, und lassen sich von einfachen USB-Powerbanks laden oder betreiben.
+- **Unabhängig vom Stromnetz:** Nachrichten werden über [Solar-Repeater](#solar-repeater) weitergeleitet. Damit ist Meshcore unabhängig vom Stromnetz.
+- **Geringer Stromverbrauch:** Endgeräte haben lange Batterielaufzeit, und lassen sich von einfachen USB-Powerbanks laden oder betreiben.
 - **Sichere Kommunikation:** Die MeshCore-Kurznachrichten sind signiert und verschlüsselt.
 - **Kostenlos** Bis auf Hardware-Kosten für einen LoRa-Empfänger (ab 20 EUR, siehe [Hardware](#hardware)) ist MeshCore komplett kostenlos.
 
 ### Anwendungsfälle
 
-- Kommunikation bei Outdoor-Aktivitäten (Wandern, Radfahren)
-- Sensoren, Telemetrie oder Anbindung an Smart-Home-Systeme
-- Kommunikation selbst bei Ausfall von Strom oder Internet
+- **Großveranstaltungen wie Festivals und Sportevents**: unabhängig von überlasteten Mobilfunknetzen
+- **Outdoor-Aktivitäten** (Wandern, Radfahren): Funklöcher sind kein Problem
+- **Bei Ausfall von Strom oder Internet**: dank Solar-Repeater und Endgeräten mit Batterie
 
 </div>
 </section>
@@ -106,7 +106,7 @@ MeshCore läuft auf kostengünstigen LoRa-Boards wie:
         <br>• ca. 90€</span>
         </p>
     </div>
-    <div class="hardware-card">
+    <div class="hardware-card" id="solar-repeater">
         <img src="{{ '/assets/images/solar-node.jpg' | relative_url }}" alt="Solar Node P1-Pro">
         <p><strong><a href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshcore-p-6741.html" target="_blank">Solar Node P1-Pro</a></strong>
         <span class="hardware-details">• Solarbetriebener Outdoor-Repeater
