@@ -111,69 +111,140 @@
             <summary>Was hat MeshCore mit LoRaWAN, TTN oder Helium zu tun?</summary>
             <p>Alle nutzen dieselbe Funktechnik LoRa, sind aber für ganz andere Zwecke gebaut und untereinander nicht
                 kompatibel.</p>
-            <p><strong>LoRaWAN</strong> ist ein Protokoll für das Internet der Dinge: Sensoren wie Wasserzähler,
-                Parkplatzmelder oder Wetterstationen senden ihre Messwerte an Gateways in der Nähe. Diese reichen die
-                Daten über das Internet an einen zentralen Server weiter. Die Geräte sprechen nie direkt miteinander,
-                es entsteht also kein Mesh. Fällt das Internet oder der Server aus, steht das Netz still.</p>
+            <table>
+                <tr>
+                    <th>Kriterium</th>
+                    <th>LoRaWAN</th>
+                    <th>MeshCore</th>
+                </tr>
+                <tr>
+                    <td><strong>Zweck</strong></td>
+                    <td>Sensordaten aus dem Internet der Dinge: Wasserzähler, Parkplatzmelder, Wetterstationen</td>
+                    <td>Textnachrichten zwischen Menschen</td>
+                </tr>
+                <tr>
+                    <td><strong>Aufbau</strong></td>
+                    <td>Stern: Jedes Gerät funkt zum nächsten Gateway, kein Mesh. Geräte sprechen nie direkt
+                        miteinander.</td>
+                    <td>Mesh: Nachrichten springen von Repeater zu Repeater bis zum Ziel</td>
+                </tr>
+                <tr>
+                    <td><strong>Abhängigkeiten</strong></td>
+                    <td>Gateways reichen die Daten über das Internet an einen zentralen Server weiter. Fällt
+                        Internet oder Server aus, steht das Netz still.</td>
+                    <td>Kommt ganz ohne Internet und zentrale Server aus</td>
+                </tr>
+            </table>
             <p><a href="https://www.thethingsnetwork.org/" target="_blank">The Things Network (TTN)</a> und
                 <a href="https://www.helium.com/" target="_blank">Helium</a> sind zwei öffentliche LoRaWAN-Netze:
                 TTN wird von einer Community getragen, die Gateways ehrenamtlich betreibt. Bei Helium werden die
                 Betreiber der Gateways mit Kryptowährung entlohnt.
             </p>
-            <p>MeshCore dagegen ist für Textnachrichten zwischen Menschen gedacht und kommt ganz ohne Internet und
-                zentrale Server aus: Die Nachrichten springen direkt von Repeater zu Repeater.</p>
         </details>
 
         <details>
             <summary>Was unterscheidet MeshCore von Reticulum?</summary>
             <p><a href="https://reticulum.network/" target="_blank">Reticulum</a> ist kein reines LoRa-Projekt,
-                sondern ein vollständiger Netzwerk-Stack, gewissermaßen ein Ersatz für das Internetprotokoll. Er
-                funktioniert über beliebige Übertragungswege: LoRa, Packet Radio, WLAN, serielle Kabel oder das
-                Internet lassen sich in einem Netz kombinieren. Jede Verbindung ist dabei grundsätzlich
-                verschlüsselt, und Adressen sind kryptografische Schlüssel statt fester Gerätenummern.</p>
-            <p>Auf Reticulum laufen eigene Anwendungen wie <em>Sideband</em> oder <em>NomadNet</em>, die neben
-                Nachrichten auch Dateiübertragung, Sprachnachrichten oder sogar kleine Webseiten bieten. Der Preis
-                dafür ist eine aufwendigere Einrichtung und eine kleinere Community.</p>
-            <p>MeshCore konzentriert sich dagegen auf eine Aufgabe: Textnachrichten über LoRa. Die Firmware läuft
-                direkt auf günstigen Funkmodulen, Repeater arbeiten völlig eigenständig, und der Einstieg gelingt mit
-                wenigen Klicks in der App. Die beiden Netze sind untereinander nicht kompatibel.</p>
+                sondern ein vollständiger Netzwerk-Stack, gewissermaßen ein Ersatz für das Internetprotokoll.
+                MeshCore konzentriert sich dagegen auf eine Aufgabe: Textnachrichten über LoRa. Die beiden Netze sind
+                untereinander nicht kompatibel.</p>
+            <table>
+                <tr>
+                    <th>Kriterium</th>
+                    <th>Reticulum</th>
+                    <th>MeshCore</th>
+                </tr>
+                <tr>
+                    <td><strong>Übertragungswege</strong></td>
+                    <td>Beliebige: LoRa, Packet Radio, WLAN, serielle Kabel oder Internet lassen sich in einem Netz
+                        kombinieren</td>
+                    <td>LoRa, Firmware direkt auf günstigen Funkmodulen</td>
+                </tr>
+                <tr>
+                    <td><strong>Funktionen</strong></td>
+                    <td>Eigene Anwendungen wie <em>Sideband</em> oder <em>NomadNet</em> bieten neben Nachrichten
+                        Dateiübertragung, Sprachnachrichten und kleine Webseiten. Jede Verbindung ist verschlüsselt,
+                        Adressen sind kryptografische Schlüssel statt fester Gerätenummern.</td>
+                    <td>Textnachrichten, verschlüsselt; Repeater arbeiten völlig eigenständig</td>
+                </tr>
+                <tr>
+                    <td><strong>Einstieg</strong></td>
+                    <td>Aufwendigere Einrichtung, kleinere Community</td>
+                    <td>Wenige Klicks in der App</td>
+                </tr>
+            </table>
         </details>
 
         <details>
             <summary>Was unterscheidet MeshCore von MeshCom?</summary>
             <p><a href="https://icssw.org/en/meshcom/" target="_blank">MeshCom</a> ist ein LoRa-Mesh aus dem
                 Amateurfunk, entwickelt vom österreichischen ICSSW und vor allem im deutschsprachigen Raum verbreitet.
-                Wer MeshCom nutzen will, braucht eine <strong>Amateurfunklizenz</strong> und sendet unter seinem
-                Rufzeichen. MeshCore dagegen darf jeder ohne Lizenz nutzen.</p>
-            <p>Beide Netze funken auf unterschiedlichen Frequenzen und können sich nicht gegenseitig empfangen:</p>
-            <ul>
-                <li><strong>MeshCom:</strong> 433,175&nbsp;MHz im 70-cm-Amateurfunkband.
-                    Funkamateure dürfen je nach Lizenzklasse mit deutlich mehr Leistung senden und unterliegen keiner
-                    Sendezeitbegrenzung.</li>
-                <li><strong>MeshCore:</strong> 869,618&nbsp;MHz im lizenzfreien 868-MHz-Band.</li>
-            </ul>
-            <p>Ein weiterer Unterschied: Im Amateurfunk ist Verschlüsselung verboten, alle Nachrichten im MeshCom-Netz
-                sind daher öffentlich lesbar. Dafür sind viele MeshCom-Knoten über Gateways mit dem Internet
-                verbunden, sodass Nachrichten auch weit entfernte Regionen erreichen.</p>
+                MeshCore darf dagegen jeder ohne Lizenz nutzen. Beide Netze funken auf unterschiedlichen Frequenzen
+                und können sich nicht gegenseitig empfangen.</p>
+            <table>
+                <tr>
+                    <th>Kriterium</th>
+                    <th>MeshCom</th>
+                    <th>MeshCore</th>
+                </tr>
+                <tr>
+                    <td><strong>Lizenz</strong></td>
+                    <td><strong>Amateurfunklizenz</strong> nötig, Senden unter eigenem Rufzeichen</td>
+                    <td>Lizenzfrei für jeden</td>
+                </tr>
+                <tr>
+                    <td><strong>Frequenz und Leistung</strong></td>
+                    <td>433,175&nbsp;MHz im 70-cm-Amateurfunkband. Je nach Lizenzklasse deutlich mehr Sendeleistung
+                        und keine Sendezeitbegrenzung.</td>
+                    <td>869,618&nbsp;MHz im lizenzfreien 868-MHz-Band</td>
+                </tr>
+                <tr>
+                    <td><strong>Verschlüsselung</strong></td>
+                    <td>Im Amateurfunk verboten, alle Nachrichten sind öffentlich lesbar</td>
+                    <td>Direktnachrichten Ende-zu-Ende-verschlüsselt</td>
+                </tr>
+                <tr>
+                    <td><strong>Internet</strong></td>
+                    <td>Viele Knoten sind über Gateways mit dem Internet verbunden, sodass Nachrichten auch weit
+                        entfernte Regionen erreichen</td>
+                    <td>Kein Internet nötig, Nachrichten laufen nur über Repeater</td>
+                </tr>
+            </table>
         </details>
 
         <details>
             <summary>Was unterscheidet MeshCore von Meshtastic?</summary>
             <p>Beide Projekte bauen Mesh-Netze auf LoRa-Basis, verfolgen aber unterschiedliche Ansätze. Die Geräte
                 sind untereinander nicht kompatibel, laufen aber auf derselben Hardware: Wer wechseln will, spielt
-                einfach eine andere Firmware auf.</p>
-            <p><strong>Weiterleitung:</strong> Bei Meshtastic leitet grundsätzlich jedes Gerät empfangene Nachrichten
-                erneut weiter. Das funktioniert in kleinen Gruppen gut, führt in größeren Netzen aber schnell zu
-                überlasteten Funkkanälen. Deshalb ist die Zahl der Weiterleitungen meist auf wenige Sprünge begrenzt,
-                was die Reichweite des Netzes einschränkt. MeshCore trennt dagegen zwischen Endgeräten (Companions), die
-                nichts weiterleiten, und fest installierten Repeatern. Die erste Nachricht an einen Kontakt verbreitet
-                sich noch über das ganze Netz, dabei merkt sich MeshCore den gefundenen Weg. Folgende Nachrichten
-                laufen dann gezielt nur über die Repeater auf diesem Weg.</p>
-            <p><strong>Funkverkehr:</strong> Meshtastic-Geräte senden regelmäßig von sich aus Position, Telemetrie und
-                Geräteinformationen. MeshCore sendet dagegen fast nur, wenn tatsächlich eine Nachricht unterwegs ist.
-                Der Funkkanal bleibt so frei für das Wesentliche.</p>
-            <p>Dadurch skaliert MeshCore besser: Nachrichten kommen auch über viele Repeater und große Entfernungen
-                zuverlässig an. Meshtastic hat dafür die größere Community und bietet mehr Funktionen.</p>
+                einfach eine andere Firmware auf. MeshCore skaliert besser, Meshtastic hat die größere Community.</p>
+            <table>
+                <tr>
+                    <th>Kriterium</th>
+                    <th>Meshtastic</th>
+                    <th>MeshCore</th>
+                </tr>
+                <tr>
+                    <td><strong>Weiterleitung</strong></td>
+                    <td>Grundsätzlich leitet jedes Gerät empfangene Nachrichten erneut weiter. In kleinen Gruppen
+                        gut, in größeren Netzen überlastet das die Funkkanäle. Deshalb ist die Zahl der
+                        Weiterleitungen meist auf wenige Sprünge begrenzt, was die Reichweite einschränkt.</td>
+                    <td>Trennt zwischen Endgeräten (Companions), die nichts weiterleiten, und fest installierten
+                        Repeatern. Die erste Nachricht an einen Kontakt verbreitet sich über das ganze Netz, dabei
+                        merkt sich MeshCore den Weg. Folgende Nachrichten laufen gezielt nur über die Repeater auf
+                        diesem Weg.</td>
+                </tr>
+                <tr>
+                    <td><strong>Funkverkehr</strong></td>
+                    <td>Geräte senden regelmäßig von sich aus Position, Telemetrie und Geräteinformationen</td>
+                    <td>Sendet fast nur, wenn tatsächlich eine Nachricht unterwegs ist. Der Funkkanal bleibt frei
+                        für das Wesentliche.</td>
+                </tr>
+                <tr>
+                    <td><strong>Netzgröße und Umfang</strong></td>
+                    <td>Größere Community, mehr Funktionen</td>
+                    <td>Nachrichten kommen auch über viele Repeater und große Entfernungen zuverlässig an</td>
+                </tr>
+            </table>
         </details>
 
         <details>
