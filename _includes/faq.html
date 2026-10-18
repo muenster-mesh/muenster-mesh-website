@@ -108,43 +108,6 @@
 
 
         <details>
-            <summary>Was unterscheidet MeshCore von Meshtastic?</summary>
-            <p>Beide Projekte bauen Mesh-Netze auf LoRa-Basis, verfolgen aber unterschiedliche Ansätze. Die Geräte
-                sind untereinander nicht kompatibel, laufen aber auf derselben Hardware: Wer wechseln will, spielt
-                einfach eine andere Firmware auf.</p>
-            <p><strong>Weiterleitung:</strong> Bei Meshtastic leitet grundsätzlich jedes Gerät empfangene Nachrichten
-                erneut weiter. Das funktioniert in kleinen Gruppen gut, führt in größeren Netzen aber schnell zu
-                überlasteten Funkkanälen. Deshalb ist die Zahl der Weiterleitungen meist auf wenige Sprünge begrenzt,
-                was die Reichweite des Netzes einschränkt. MeshCore trennt dagegen zwischen Endgeräten (Companions), die
-                nichts weiterleiten, und fest installierten Repeatern. Die erste Nachricht an einen Kontakt verbreitet
-                sich noch über das ganze Netz, dabei merkt sich MeshCore den gefundenen Weg. Folgende Nachrichten
-                laufen dann gezielt nur über die Repeater auf diesem Weg.</p>
-            <p><strong>Funkverkehr:</strong> Meshtastic-Geräte senden regelmäßig von sich aus Position, Telemetrie und
-                Geräteinformationen. MeshCore sendet dagegen fast nur, wenn tatsächlich eine Nachricht unterwegs ist.
-                Der Funkkanal bleibt so frei für das Wesentliche.</p>
-            <p>Dadurch skaliert MeshCore besser: Nachrichten kommen auch über viele Repeater und große Entfernungen
-                zuverlässig an. Meshtastic hat dafür die größere Community und bietet mehr Funktionen.</p>
-        </details>
-
-        <details>
-            <summary>Was unterscheidet MeshCore von MeshCom?</summary>
-            <p><a href="https://icssw.org/en/meshcom/" target="_blank">MeshCom</a> ist ein LoRa-Mesh aus dem
-                Amateurfunk, entwickelt vom österreichischen ICSSW und vor allem im deutschsprachigen Raum verbreitet.
-                Wer MeshCom nutzen will, braucht eine <strong>Amateurfunklizenz</strong> und sendet unter seinem
-                Rufzeichen. MeshCore dagegen darf jeder ohne Lizenz nutzen.</p>
-            <p>Beide Netze funken auf unterschiedlichen Frequenzen und können sich nicht gegenseitig empfangen:</p>
-            <ul>
-                <li><strong>MeshCom:</strong> 433,175&nbsp;MHz im 70-cm-Amateurfunkband.
-                    Funkamateure dürfen je nach Lizenzklasse mit deutlich mehr Leistung senden und unterliegen keiner
-                    Sendezeitbegrenzung.</li>
-                <li><strong>MeshCore:</strong> 869,618&nbsp;MHz im lizenzfreien 868-MHz-Band.</li>
-            </ul>
-            <p>Ein weiterer Unterschied: Im Amateurfunk ist Verschlüsselung verboten, alle Nachrichten im MeshCom-Netz
-                sind daher öffentlich lesbar. Dafür sind viele MeshCom-Knoten über Gateways mit dem Internet
-                verbunden, sodass Nachrichten auch weit entfernte Regionen erreichen.</p>
-        </details>
-
-        <details>
             <summary>Was hat MeshCore mit LoRaWAN, TTN oder Helium zu tun?</summary>
             <p>Alle nutzen dieselbe Funktechnik LoRa, sind aber für ganz andere Zwecke gebaut und untereinander nicht
                 kompatibel.</p>
@@ -174,6 +137,43 @@
             <p>MeshCore konzentriert sich dagegen auf eine Aufgabe: Textnachrichten über LoRa. Die Firmware läuft
                 direkt auf günstigen Funkmodulen, Repeater arbeiten völlig eigenständig, und der Einstieg gelingt mit
                 wenigen Klicks in der App. Die beiden Netze sind untereinander nicht kompatibel.</p>
+        </details>
+
+        <details>
+            <summary>Was unterscheidet MeshCore von MeshCom?</summary>
+            <p><a href="https://icssw.org/en/meshcom/" target="_blank">MeshCom</a> ist ein LoRa-Mesh aus dem
+                Amateurfunk, entwickelt vom österreichischen ICSSW und vor allem im deutschsprachigen Raum verbreitet.
+                Wer MeshCom nutzen will, braucht eine <strong>Amateurfunklizenz</strong> und sendet unter seinem
+                Rufzeichen. MeshCore dagegen darf jeder ohne Lizenz nutzen.</p>
+            <p>Beide Netze funken auf unterschiedlichen Frequenzen und können sich nicht gegenseitig empfangen:</p>
+            <ul>
+                <li><strong>MeshCom:</strong> 433,175&nbsp;MHz im 70-cm-Amateurfunkband.
+                    Funkamateure dürfen je nach Lizenzklasse mit deutlich mehr Leistung senden und unterliegen keiner
+                    Sendezeitbegrenzung.</li>
+                <li><strong>MeshCore:</strong> 869,618&nbsp;MHz im lizenzfreien 868-MHz-Band.</li>
+            </ul>
+            <p>Ein weiterer Unterschied: Im Amateurfunk ist Verschlüsselung verboten, alle Nachrichten im MeshCom-Netz
+                sind daher öffentlich lesbar. Dafür sind viele MeshCom-Knoten über Gateways mit dem Internet
+                verbunden, sodass Nachrichten auch weit entfernte Regionen erreichen.</p>
+        </details>
+
+        <details>
+            <summary>Was unterscheidet MeshCore von Meshtastic?</summary>
+            <p>Beide Projekte bauen Mesh-Netze auf LoRa-Basis, verfolgen aber unterschiedliche Ansätze. Die Geräte
+                sind untereinander nicht kompatibel, laufen aber auf derselben Hardware: Wer wechseln will, spielt
+                einfach eine andere Firmware auf.</p>
+            <p><strong>Weiterleitung:</strong> Bei Meshtastic leitet grundsätzlich jedes Gerät empfangene Nachrichten
+                erneut weiter. Das funktioniert in kleinen Gruppen gut, führt in größeren Netzen aber schnell zu
+                überlasteten Funkkanälen. Deshalb ist die Zahl der Weiterleitungen meist auf wenige Sprünge begrenzt,
+                was die Reichweite des Netzes einschränkt. MeshCore trennt dagegen zwischen Endgeräten (Companions), die
+                nichts weiterleiten, und fest installierten Repeatern. Die erste Nachricht an einen Kontakt verbreitet
+                sich noch über das ganze Netz, dabei merkt sich MeshCore den gefundenen Weg. Folgende Nachrichten
+                laufen dann gezielt nur über die Repeater auf diesem Weg.</p>
+            <p><strong>Funkverkehr:</strong> Meshtastic-Geräte senden regelmäßig von sich aus Position, Telemetrie und
+                Geräteinformationen. MeshCore sendet dagegen fast nur, wenn tatsächlich eine Nachricht unterwegs ist.
+                Der Funkkanal bleibt so frei für das Wesentliche.</p>
+            <p>Dadurch skaliert MeshCore besser: Nachrichten kommen auch über viele Repeater und große Entfernungen
+                zuverlässig an. Meshtastic hat dafür die größere Community und bietet mehr Funktionen.</p>
         </details>
 
         <details>
