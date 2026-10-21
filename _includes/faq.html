@@ -3,7 +3,7 @@
     <div class="content-box faq">
 
         <details>
-            <summary>Was ist ein Mesh-Netzwerk?</summary>
+            <summary>Was ist das Mesh-Netzwerk?</summary>
             <p>Ein Funknetz, in dem Geräte direkt miteinander verbunden sind,
                 statt über einen zentralen Server oder Funkmast zu kommunizieren. Nachrichten werden von Gerät zu Gerät
                 weitergereicht
@@ -61,7 +61,7 @@
             <p>Über den <strong>Spreading Factor</strong> (SF7 bis SF12) lässt sich die Länge eines Chirps einstellen.
                 Jede Stufe verdoppelt die Sendedauer: Höhere Spreading Factors reichen weiter und sind robuster, senden
                 aber langsamer. Niedrigere Spreading Factors sind schneller, haben dafür aber eine geringere
-                Reichweite.</p>
+                Reichweite. MeshCore nutzt in Deutschland SF8.</p>
             <figure>
                 <img src="{{ '/assets/images/lora-chirps.jpg' | relative_url }}"
                     alt="Wasserfalldiagramm von LoRa-Chirps: Up- und Down-Chirps laufen über die Bandbreite; mit steigendem Spreading Factor von SF7 bis SF12 werden die Chirps länger">
@@ -259,19 +259,21 @@
         </details>
 
         <details>
-            <summary>Ist MeshCore legal?</summary>
-            <p>Ja. MeshCore nutzt das lizenzfreie 868-MHz-Band, das in Europa für solche Anwendungen freigegeben ist.
-                Wichtig ist, dass dein Gerät auf die Region <strong>EU868</strong> eingestellt ist, damit die erlaubten
-                Sendeleistungen und Sendezeiten eingehalten werden.</p>
-            <p>Die Sendezeit regelt die Bundesnetzagentur über den <strong>Arbeitszyklus</strong>: den Anteil einer
-                Stunde, in dem ein Gerät in einem Frequenzband senden darf. Ein Arbeitszyklus von 1&nbsp;% bedeutet
-                also höchstens 36 Sekunden Sendezeit pro Stunde. Die Grenzen hängen vom Teilband ab: In weiten Teilen
-                des 868-MHz-Bands gelten 1&nbsp;% oder sogar nur 0,1&nbsp;%. Im Teilband 869,4–869,65&nbsp;MHz, das
-                MeshCore in Europa nutzt, sind dagegen 10&nbsp;% (6 Minuten pro Stunde) bei bis zu 500&nbsp;mW
-                erlaubt. Im 433-MHz-Band sind es 10&nbsp;% bei nur 10&nbsp;mW.</p>
-            <p>Quelle: <a
+            <summary>Wieviel Sendezeit und Sendeleistung ist erlaubt?</summary>
+            <p><strong>Sendezeit:</strong> Im Teilband 869,4–869,65&nbsp;MHz, das MeshCore in Europa nutzt, erlaubt
+                die <a
                     href="https://www.bundesnetzagentur.de/DE/Fachthemen/Telekommunikation/Frequenzen/Allgemeinzuteilungen/_DL/vfg91_2025.pdf"
-                    target="_blank">Bundesnetzagentur, Vfg. 91/2025</a></p>
+                    target="_blank">Bundesnetzagentur</a> einen Arbeitszyklus von 10&nbsp;%. Das bedeutet, ein Gerät
+                darf
+                höchstens 6 Minuten pro Stunde senden.</p>
+            <p><strong>Sendeleistung:</strong> In Meshcore-Teilband sind bis zu 500&nbsp;mW erlaubt. Zum Vergleich: Im
+                ebenfalls frei nutzbaren 433-MHz-Band wären es nur 10&nbsp;mW.</p>
+            <p>Wichtig ist, dass dein Gerät auf die Region <strong>EU/UK (narrow)</strong> eingestellt ist, damit die
+                erlaubten
+                Sendeleistungen und Sendezeiten eingehalten werden. Damit hört und sendet dein Gerät auf
+                869.618 MHz,
+                mit Bandbreite 62,5 kHz und einem Spreading Factor SF8.
+            </p>
         </details>
 
         <details>
