@@ -123,16 +123,16 @@
                     <td>Textnachrichten zwischen Menschen</td>
                 </tr>
                 <tr>
-                    <td><strong>Aufbau</strong></td>
+                    <td><strong>Netzwerk-Layout</strong></td>
                     <td>Stern: Jedes Gerät funkt zum nächsten Gateway, kein Mesh. Geräte sprechen nie direkt
                         miteinander.</td>
-                    <td>Mesh: Nachrichten springen von Repeater zu Repeater bis zum Ziel</td>
+                    <td>Mesh: Nachrichten springen von Repeater zu Repeater bis zum Ziel.</td>
                 </tr>
                 <tr>
-                    <td><strong>Abhängigkeiten</strong></td>
+                    <td><strong>Internet-Abhängigkeit</strong></td>
                     <td>Gateways reichen die Daten über das Internet an einen zentralen Server weiter. Fällt
                         Internet oder Server aus, steht das Netz still.</td>
-                    <td>Kommt ganz ohne Internet und zentrale Server aus</td>
+                    <td>Kommt ganz ohne Internet und zentrale Server aus.</td>
                 </tr>
             </table>
             <p><a href="https://www.thethingsnetwork.org/" target="_blank">The Things Network (TTN)</a> und
@@ -165,12 +165,12 @@
                     <td>Eigene Anwendungen wie <em>Sideband</em> oder <em>NomadNet</em> bieten neben Nachrichten
                         Dateiübertragung, Sprachnachrichten und kleine Webseiten. Jede Verbindung ist verschlüsselt,
                         Adressen sind kryptografische Schlüssel statt fester Gerätenummern.</td>
-                    <td>Textnachrichten, verschlüsselt; Repeater arbeiten völlig eigenständig</td>
+                    <td>Textnachrichten, verschlüsselt.</td>
                 </tr>
                 <tr>
                     <td><strong>Einstieg</strong></td>
-                    <td>Aufwendigere Einrichtung, kleinere Community</td>
-                    <td>Wenige Klicks in der App</td>
+                    <td>Aufwendigere Einrichtung, kleinere Community.</td>
+                    <td>Schnelle Einrichtung, größere Community.</td>
                 </tr>
             </table>
         </details>
@@ -189,8 +189,8 @@
                 </tr>
                 <tr>
                     <td><strong>Lizenz</strong></td>
-                    <td><strong>Amateurfunklizenz</strong> nötig, Senden unter eigenem Rufzeichen</td>
-                    <td>Lizenzfrei für jeden</td>
+                    <td><strong>Amateurfunklizenz</strong> nötig, Senden nur mit Rufzeichen.</td>
+                    <td>Lizenzfrei für jeden. Anonyme Nutzung möglich.</td>
                 </tr>
                 <tr>
                     <td><strong>Frequenz und Leistung</strong></td>
@@ -201,13 +201,15 @@
                 <tr>
                     <td><strong>Verschlüsselung</strong></td>
                     <td>Im Amateurfunk verboten, alle Nachrichten sind öffentlich lesbar</td>
-                    <td>Direktnachrichten Ende-zu-Ende-verschlüsselt</td>
+                    <td>Direktnachrichten nutzen Public Key Verschlüsselung. Channels sind symmetrisch mit Passwort
+                        verschlüsselt.</td>
                 </tr>
                 <tr>
-                    <td><strong>Internet</strong></td>
-                    <td>Viele Knoten sind über Gateways mit dem Internet verbunden, sodass Nachrichten auch weit
+                    <td><strong>Internet-Anbindung</strong></td>
+                    <td>Viele Knoten sind über Gateways mit dem Internet verbunden, sodass Nachrichten per
+                        Internet-Weiterleitung auch weit
                         entfernte Regionen erreichen</td>
-                    <td>Kein Internet nötig, Nachrichten laufen nur über Repeater</td>
+                    <td>Internet-Weiterleitung nicht üblich, Nachrichten laufen nur über Repeater</td>
                 </tr>
             </table>
         </details>
@@ -235,25 +237,26 @@
                 </tr>
                 <tr>
                     <td><strong>Funkverkehr</strong></td>
-                    <td>Geräte senden regelmäßig von sich aus Position, Telemetrie und Geräteinformationen</td>
+                    <td>Geräte senden regelmäßig von sich aus Position, Telemetrie und Geräteinformationen.</td>
                     <td>Sendet fast nur, wenn tatsächlich eine Nachricht unterwegs ist. Der Funkkanal bleibt frei
                         für das Wesentliche.</td>
                 </tr>
                 <tr>
-                    <td><strong>Netzgröße und Umfang</strong></td>
-                    <td>Größere Community, mehr Funktionen</td>
-                    <td>Nachrichten kommen auch über viele Repeater und große Entfernungen zuverlässig an</td>
+                    <td><strong>Netzgröße und Reichweite</strong></td>
+                    <td>Größere Community, aber Verbindungen über viele Repeater sind instabil.</td>
+                    <td>Nachrichten kommen auch über viele Repeater und große Entfernungen relativ zuverlässig an.</td>
                 </tr>
             </table>
         </details>
 
         <details>
             <summary>Darf ich MeshCore-Nachrichten verschlüsseln?</summary>
-            <p>Direktnachrichten zwischen zwei Teilnehmern sind Ende-zu-Ende-verschlüsselt und signiert, sodass nur der
+            <p>Ja, Direktnachrichten zwischen zwei Teilnehmern sind sogar standardmäßig Ende-zu-Ende-verschlüsselt und
+                signiert, sodass nur
+                der
                 Empfänger sie lesen kann.</p>
             <p> Private Kanäle sind mit einem gemeinsamen Passwort verschlüsselt: Mitlesen kann nur,
-                wer dieses Passwort kennt. Nachrichten in öffentlichen Kanälen kann dagegen jeder im Netz mitlesen
-                — dort solltest du keine privaten Informationen teilen.</p>
+                wer dieses Passwort kennt. Nachrichten in öffentlichen Kanälen kann dagegen jeder im Netz mitlesen.</p>
             <p>Repeater leiten verschlüsselte Nachrichten üblicherweise weiter, ohne sie selbst lesen zu können. So sind
                 auch über große Entfernungen und viele Zwischenstationen stark verschlüsselte Gespräche möglich.</p>
         </details>
@@ -272,7 +275,7 @@
                 erlaubten
                 Sendeleistungen und Sendezeiten eingehalten werden. Damit hört und sendet dein Gerät auf
                 869.618 MHz,
-                mit Bandbreite 62,5 kHz und einem Spreading Factor SF8.
+                mit Bandbreite 62,5 kHz und einem Spreading Factor 8.
             </p>
         </details>
 
@@ -290,7 +293,7 @@
                     weitergeleitet hat, und sendet keine davon ein zweites Mal.</li>
                 <li><strong>Wenig Hintergrundverkehr:</strong> Geräte melden sich nur selten von selbst im Netz,
                     statt ständig Position oder Messwerte zu verbreiten.</li>
-                <li><strong>Begrenzte Reichweite:</strong> Repeater-Betreiber können festlegen, über wie viele
+                <li><strong>Reichweitenlimits:</strong> Repeater-Betreiber können festlegen, über wie viele
                     Stationen sich eine Nachricht höchstens ausbreitet. Mit <em>Regionen</em> lässt sich außerdem
                     steuern, dass eine Nachricht nur in einem bestimmten Gebiet weitergeleitet wird, etwa im
                     Münsterland, statt das ganze Netz zu belasten.</li>
@@ -300,7 +303,7 @@
         </details>
 
         <details>
-            <summary>Was kostet mich MeshCore-Nachrichten?</summary>
+            <summary>Was kostet mich die MeshCore-Nutzung?</summary>
             <p>Abgesehen von der einmaligen Anschaffung der Hardware fallen keine laufenden Kosten an — kein
                 Vertrag, keine SIM-Karte, keine Gebühren. Die MeshCore-Firmware ist freie Software.</p>
         </details>
