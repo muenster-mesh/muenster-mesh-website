@@ -76,8 +76,8 @@ Jeder Punkt steht für einen Knoten oder Repeater, die gemeinsam das MeshCore-Ne
 
 1. **Hardware besorgen:** Kaufe ein kompatibles LoRa-Board, siehe [Hardware](#hardware).
 2. **Firmware flashen:** Installiere die [MeshCore-Firmware](https://flasher.meshcore.io/) auf deinem Gerät.
-3. **Konfigurieren:** Stelle die Region auf **EU868** und wähle einen Knotennamen.
-4. **Aufstellen:** Platziere dein Gerät an einem erhöhten Ort für beste Reichweite.
+3. **Konfigurieren:** Stelle die Region auf **EU/UK (narrow)** und wähle einen Namen für dein Gerät.
+4. **Aufstellen:** Platziere dein Gerät an einem erhöhten Ort oder Fenster für beste Reichweite.
 5. **Vernetzen:** Tritt unserer Community bei und tausche dich aus.
 
 </div>
